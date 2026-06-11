@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: doc-ai-backend
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: gunicorn backend.run:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: JWT_SECRET_KEY
+        generator: secret
+      - key: SECRET_KEY
+        generator: secret
+      - key: SQLALCHEMY_DATABASE_URI
+        value: sqlite:///doc_ai.db
+      - key: GOOGLE_PLACES_API_KEY
+        value: ""
+      - key: IMAGE_MODEL_PATH
+        value: app/ml/image_model.h5
+      - key: TEXT_MODEL_PATH
+        value: app/ml/text_model.joblib
+
+  - type: static
+    name: doc-ai-frontend
+    buildCommand: cd frontend && npm install && npm run build
+    publishPath: frontend/dist

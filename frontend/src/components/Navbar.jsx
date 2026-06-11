@@ -1,0 +1,111 @@
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Brain, Menu, X, ArrowRight } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { getInitials } from '../utils/formatters';
+
+export default function Navbar() {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const navLinks = [
+    { label: 'Features', href: '#features' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Testimonials', href: '#testimonials' },
+  ];
+
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-white/80 backdrop-blur-xl border-b border-border shadow-soft' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2.5">
+            <div className="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold text-text-primary">DOC-AI</span>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a key={link.label} href={link.href} className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center gap-3">
+            {user ? (
+              <Link to="/dashboard" className="btn-primary btn-sm">
+                Dashboard <ArrowRight className="w-4 h-4" />
+              </Link>
+            ) : (
+              <>
+                <Link to="/login" className="btn-ghost btn-sm">Sign In</Link>
+                <Link to="/register" className="btn-primary btn-sm">
+                  Get Started <ArrowRight className="w-4 h-4" />
+                </Link>
+              </>
+            )}
+          </div>
+
+          {/* Mobile Hamburger */}
+          <button onClick={() => setMenuOpen(true)} className="md:hidden p-2 text-text-secondary hover:text-text-primary" aria-label="Open menu">
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {menuOpen && (
+          <>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden" onClick={() => setMenuOpen(false)} />
+            <motion.div
+              initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              className="fixed top-0 right-0 bottom-0 w-72 bg-white border-l border-border z-50 p-6 flex flex-col md:hidden"
+            >
+              <div className="flex justify-between items-center mb-8">
+                <span className="text-lg font-bold text-text-primary">Menu</span>
+                <button onClick={() => setMenuOpen(false)} className="p-2 text-text-secondary hover:text-text-primary" aria-label="Close menu">
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <nav className="flex flex-col gap-2 flex-1">
+                {navLinks.map((link) => (
+                  <a key={link.label} href={link.href} onClick={() => setMenuOpen(false)} className="px-4 py-3 rounded-xl text-text-secondary hover:text-text-primary hover:bg-slate-100 transition-colors">
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+              <div className="flex flex-col gap-3 pt-6 border-t border-border">
+                {user ? (
+                  <Link to="/dashboard" onClick={() => setMenuOpen(false)} className="btn-primary w-full justify-center">Dashboard</Link>
+                ) : (
+                  <>
+                    <Link to="/login" onClick={() => setMenuOpen(false)} className="btn-outline w-full justify-center">Sign In</Link>
+                    <Link to="/register" onClick={() => setMenuOpen(false)} className="btn-primary w-full justify-center">Get Started</Link>
+                  </>
+                )}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
