@@ -48,3 +48,10 @@ build/
 
 # Dataset
 backend/datasets/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+backend/.venv_broken/
