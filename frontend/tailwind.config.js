@@ -38,7 +38,7 @@ export default {
           900: '#0C4A6E',
         },
         secondary: {
-          DEFAULT: '#0D9488', // Medical Teal (teal-600)
+          DEFAULT: '#0D9488', 
           50: '#F0FDFA',
           100: '#CCFBF1',
           200: '#99F6E4',
@@ -48,7 +48,7 @@ export default {
           600: '#0D9488',
           700: '#0F766E',
           800: '#115E59',
-          900: '#134E4A',
+          900: '#1f1704',
         },
         success: {
           DEFAULT: '#10B981',

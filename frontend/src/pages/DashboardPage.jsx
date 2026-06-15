@@ -14,10 +14,11 @@ import { formatRelativeTime, formatPercentage, getConfidenceLevel } from '../uti
 import { staggerContainer, staggerItem } from '../utils/animations';
 
 const quickActions = [
-  { label: 'New Diagnosis', desc: 'Analyze symptoms', icon: Stethoscope, path: '/diagnosis', color: 'from-primary/20 to-primary/5' },
-  { label: 'Image Analysis', desc: 'Upload scans', icon: ScanLine, path: '/image-analysis', color: 'from-secondary/20 to-secondary/5' },
-  { label: 'View Reports', desc: 'Past results', icon: FileText, path: '/reports', color: 'from-success/20 to-success/5' },
-  { label: 'Analytics', desc: 'View trends', icon: BarChart3, path: '/analytics', color: 'from-warning/20 to-warning/5' },
+  /* Adjusted gradients to have punchier color definitions for light background clarity */
+  { label: 'New Diagnosis', desc: 'Analyze symptoms', icon: Stethoscope, path: '/diagnosis', color: 'from-blue-500/15 to-blue-500/5', iconColor: 'text-blue-600' },
+  { label: 'Image Analysis', desc: 'Upload scans', icon: ScanLine, path: '/image-analysis', color: 'from-purple-500/15 to-purple-500/5', iconColor: 'text-purple-600' },
+  { label: 'View Reports', desc: 'Past results', icon: FileText, path: '/reports', color: 'from-emerald-500/15 to-emerald-500/5', iconColor: 'text-emerald-600' },
+  { label: 'Analytics', desc: 'View trends', icon: BarChart3, path: '/analytics', color: 'from-amber-500/15 to-amber-500/5', iconColor: 'text-amber-600' },
 ];
 
 export default function DashboardPage() {
@@ -55,7 +56,7 @@ export default function DashboardPage() {
       <PageTransition>
         {/* Welcome */}
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-text-primary">Welcome back, {user?.name?.split(' ')[0] || 'User'} 👋</h1>
+          <h1 className="text-2xl font-bold text-text-primary">Welcome Back, {user?.name?.split(' ')[0] || 'User'} 👋</h1>
           <p className="text-text-secondary mt-1">{new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}</p>
         </div>
 
@@ -69,17 +70,24 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {/* Quick Actions */}
+        {/* UPDATED QUICK ACTIONS SECTION */}
         <motion.div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8" variants={staggerContainer} initial="initial" animate="animate">
           {quickActions.map((a) => (
             <motion.div key={a.label} variants={staggerItem}>
-              <Link to={a.path} className="card-interactive flex items-start gap-3 group">
+              <Link 
+                to={a.path} 
+                className="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80 shadow-sm hover:shadow-md hover:border-blue-200 hover:bg-blue-50/10 transition-all duration-200 group"
+              >
                 <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${a.color} flex items-center justify-center shrink-0`}>
-                  <a.icon className="w-5 h-5 text-white" />
+                  <a.icon className={`w-5 h-5 ${a.iconColor}`} />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-sm font-medium text-text-primary group-hover:text-primary-400 transition-colors">{a.label}</div>
-                  <div className="text-xs text-text-tertiary">{a.desc}</div>
+                  <div className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    {a.label}
+                  </div>
+                  <div className="text-xs font-medium text-slate-500 mt-0.5">
+                    {a.desc}
+                  </div>
                 </div>
               </Link>
             </motion.div>

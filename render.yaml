@@ -19,8 +19,3 @@ services:
         value: app/ml/image_model.h5
       - key: TEXT_MODEL_PATH
         value: app/ml/text_model.joblib
-
-  - type: static
-    name: doc-ai-frontend
-    buildCommand: cd frontend && npm install && npm run build
-    publishPath: frontend/dist

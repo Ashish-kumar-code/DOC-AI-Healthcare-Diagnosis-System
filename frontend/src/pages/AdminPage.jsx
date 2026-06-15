@@ -67,7 +67,7 @@ export default function AdminPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             <StatsCard title="Text Model" value={modelStatus?.text_model?.status || 'Unknown'} icon={Brain} color="primary" />
             <StatsCard title="Image Model" value={modelStatus?.image_model?.status || 'Unknown'} icon={Brain} color="secondary" delay={0.1} />
-            <StatsCard title="Text Accuracy" value={modelStatus?.text_model?.accuracy ? `${(modelStatus.text_model.accuracy * 100).toFixed(1)}%` : 'N/A'} icon={CheckCircle} color="success" delay={0.2} />
+            <StatsCard title="Text Accuracy" value={modelStatus?.text_model?.accuracy ? `${(modelStatus.text_model.accuracy * 1).toFixed(1)}%` : 'N/A'} icon={CheckCircle} color="success" delay={0.2} />
             <StatsCard title="System" value="Operational" icon={Server} color="success" delay={0.3} />
           </div>
         )}
@@ -90,7 +90,7 @@ export default function AdminPage() {
             </div>
             <div className="space-y-2 mb-4 text-sm text-text-secondary">
               <div className="flex justify-between"><span>Algorithm</span><span className="text-text-primary">{modelStatus?.text_model?.algorithm || 'N/A'}</span></div>
-              <div className="flex justify-between"><span>Accuracy</span><span className="text-text-primary">{modelStatus?.text_model?.accuracy ? `${(modelStatus.text_model.accuracy * 100).toFixed(1)}%` : 'N/A'}</span></div>
+              <div className="flex justify-between"><span>Accuracy</span><span className="text-text-primary">{modelStatus?.text_model?.accuracy ? `${(modelStatus.text_model.accuracy * 1).toFixed(1)}%` : 'N/A'}</span></div>
               <div className="flex justify-between"><span>Features</span><span className="text-text-primary">{modelStatus?.text_model?.features_count || 'N/A'}</span></div>
             </div>
             <button onClick={() => trainModel('text')} disabled={training.text} className="btn-primary btn-sm w-full justify-center">

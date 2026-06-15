@@ -31,28 +31,48 @@ export default function NearbyPage() {
   const [locating, setLocating] = useState(false);
   const [userCoords, setUserCoords] = useState(null);
 
+  const fetchNearby = async (lat, lon, type) => {
+    setLoading(true); setError('');
+    try {
+      const res = await locationApi.nearby(lat, lon, type);
+      setPlaces(res.data.data || []);
+    } catch (err) { setError(err.response?.data?.message || 'Search failed'); }
+    setLoading(false);
+  };
+
   const handleGeoSearch = () => {
-    if (!navigator.geolocation) { setError('Geolocation is not supported'); return; }
+    if (!navigator.geolocation) { setError('Geolocation is not supported by your browser'); return; }
     setLocating(true); setError('');
     navigator.geolocation.getCurrentPosition(
-      async (pos) => {
-        setLoading(true); setLocating(false);
+      (pos) => {
+        setLocating(false);
         setUserCoords({ lat: pos.coords.latitude, lon: pos.coords.longitude });
-        try {
-          const res = await locationApi.nearby(pos.coords.latitude, pos.coords.longitude, placeType);
-          setPlaces(res.data.data || []);
-        } catch (err) { setError(err.response?.data?.message || 'Search failed'); }
-        setLoading(false);
+        fetchNearby(pos.coords.latitude, pos.coords.longitude, placeType);
       },
-      () => { setError('Location access denied'); setLocating(false); },
+      () => { setError('Location access denied. Please enable GPS permissions.'); setLocating(false); },
       { timeout: 10000 }
     );
   };
+
+  useEffect(() => {
+    // Auto-locate on mount
+    handleGeoSearch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    // Re-fetch when place type changes, if we already have coords
+    if (userCoords && !locating) {
+      fetchNearby(userCoords.lat, userCoords.lon, placeType);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [placeType]);
 
   const handleManualSearch = async (e) => {
     e.preventDefault();
     if (!manual.trim()) return;
     setLoading(true); setError('');
+    setUserCoords(null); // Reset user coords if manual searching
     try {
       const res = await locationApi.manualSearch(manual);
       setPlaces(res.data.data || []);
@@ -78,27 +98,36 @@ export default function NearbyPage() {
             const Icon = ICONS[t.value] || MapPin;
             return (
               <button key={t.value} onClick={() => setPlaceType(t.value)}
-                className={`card-static text-left transition-all ${placeType === t.value ? 'border-primary/40 bg-primary/5' : 'hover:border-border-hover'}`}>
-                <Icon className={`w-6 h-6 mb-2 ${placeType === t.value ? 'text-primary' : 'text-text-tertiary'}`} />
+                className={`card-static text-left transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg group ${placeType === t.value ? 'border-primary bg-primary/5 shadow-md scale-[1.02] ring-2 ring-primary/20' : 'hover:border-primary/40 hover:bg-white'}`}>
+                <Icon className={`w-6 h-6 mb-2 transition-colors duration-300 ${placeType === t.value ? 'text-primary' : 'text-text-tertiary group-hover:text-primary'}`} />
                 <div className="text-sm font-semibold text-text-primary">{t.label}</div>
               </button>
             );
           })}
         </div>
 
-        {/* Search Options */}
-        <div className="grid sm:grid-cols-2 gap-4 mb-8">
-          <button onClick={handleGeoSearch} disabled={locating || loading} className="btn-primary btn-lg justify-center">
-            {locating ? <Loader2 className="w-5 h-5 animate-spin" /> : <Navigation className="w-5 h-5" />}
-            {locating ? 'Getting location...' : 'Use My Location'}
-          </button>
-          <form onSubmit={handleManualSearch} className="flex gap-2">
+        {/* Search Options & GPS Status */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 w-full md:w-auto">
+            <button onClick={handleGeoSearch} disabled={locating || loading} className="btn-primary btn-lg justify-center w-full md:w-auto">
+              {locating ? <Loader2 className="w-5 h-5 animate-spin" /> : <Navigation className="w-5 h-5" />}
+              {locating ? 'Getting location...' : 'Refresh GPS'}
+            </button>
+            {userCoords && !locating && (
+              <div className="flex items-center gap-2 text-sm text-success-800 bg-success-50 px-3 py-2 rounded-lg border border-success-200">
+                <MapPin className="w-4 h-4" />
+                <span className="font-medium">GPS Active</span>
+                <span className="text-xs opacity-80 hidden sm:inline-block">({userCoords.lat.toFixed(4)}, {userCoords.lon.toFixed(4)})</span>
+              </div>
+            )}
+          </div>
+          <form onSubmit={handleManualSearch} className="flex gap-2 w-full md:w-1/3">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-tertiary" />
               <input type="text" value={manual} onChange={(e) => setManual(e.target.value)} placeholder="Search by location..."
-                className="input pl-10 h-full" />
+                className="input pl-10 h-full w-full" />
             </div>
-            <button type="submit" disabled={loading} className="btn-outline">Search</button>
+            <button type="submit" disabled={loading} className="btn-outline whitespace-nowrap">Search</button>
           </form>
         </div>
 
