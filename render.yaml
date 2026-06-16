@@ -8,9 +8,9 @@ services:
       - key: FLASK_ENV
         value: production
       - key: JWT_SECRET_KEY
-        generator: secret
+        value: temporary_secret_key_change_me_later
       - key: SECRET_KEY
-        generator: secret
+        value: temporary_session_key_change_me_later
       - key: SQLALCHEMY_DATABASE_URI
         value: sqlite:///doc_ai.db
       - key: GOOGLE_PLACES_API_KEY
