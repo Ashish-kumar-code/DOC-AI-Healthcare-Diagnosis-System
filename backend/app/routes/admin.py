@@ -4,7 +4,7 @@ Exposed only in development; protect with authentication in production.
 """
 
 from flask import Blueprint, jsonify, request, current_app
-from flask_jwt_extended import jwt_required
+from flask_jwt_extended import jwt_required, get_jwt_identity
 from sqlalchemy import text
 import psutil
 import os
@@ -23,13 +23,13 @@ admin_bp = Blueprint('admin', __name__, url_prefix='/api/admin')
 
 
 def require_admin(f):
-    """Decorator to require admin role."""
+    """Decorator to require admin role. Must be used AFTER @jwt_required()."""
     from functools import wraps
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        # In development, allow all. In production, check admin flag
-        if not current_app.config.get('DEBUG'):
-            # Would check user.is_admin flag here
+        user_id = get_jwt_identity()
+        user = db.session.get(User, user_id)
+        if not user or not user.is_admin:
             raise AuthorizationError("Admin access required")
         return f(*args, **kwargs)
     return decorated_function
@@ -40,6 +40,7 @@ def require_admin(f):
 # ============================================================
 
 @admin_bp.route('/health', methods=['GET'])
+@jwt_required()
 @handle_errors
 def system_health():
     """Get comprehensive system health status."""
@@ -97,6 +98,7 @@ def system_health():
 
 
 @admin_bp.route('/metrics', methods=['GET'])
+@jwt_required()
 @handle_errors
 def get_metrics():
     """Get application metrics."""
@@ -559,12 +561,14 @@ def get_logs():
 
 
 @admin_bp.route('/ping', methods=['GET'])
+@jwt_required()
 def ping():
     """Simple health check endpoint."""
     return jsonify({"status": "pong", "timestamp": datetime.utcnow().isoformat()}), 200
 
 
 @admin_bp.route('/routes', methods=['GET'])
+@jwt_required()
 @handle_errors
 def list_routes():
     """List all available routes."""

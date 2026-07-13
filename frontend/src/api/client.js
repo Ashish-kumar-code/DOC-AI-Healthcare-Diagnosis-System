@@ -20,7 +20,22 @@ api.interceptors.request.use((config) => {
   return config
 })
 
-// Handle 401 responses + timing
+// Flag to prevent multiple simultaneous refresh attempts
+let isRefreshing = false
+let failedQueue = []
+
+const processQueue = (error, token = null) => {
+  failedQueue.forEach(prom => {
+    if (error) {
+      prom.reject(error)
+    } else {
+      prom.resolve(token)
+    }
+  })
+  failedQueue = []
+}
+
+// Handle responses: timing + 401 token refresh
 api.interceptors.response.use(
   (res) => {
     if (import.meta.env.DEV && res.config._startTime) {
@@ -29,11 +44,67 @@ api.interceptors.response.use(
     }
     return res
   },
-  (err) => {
-    if (err.response?.status === 401) {
-      localStorage.removeItem('access_token')
-      window.location.href = '/login'
+  async (err) => {
+    const originalRequest = err.config
+
+    // If 401 and we haven't already tried to refresh
+    if (err.response?.status === 401 && !originalRequest._retry) {
+      // Don't try to refresh if this IS the refresh request or login/register
+      if (originalRequest.url?.includes('/auth/refresh') ||
+          originalRequest.url?.includes('/auth/login') ||
+          originalRequest.url?.includes('/auth/register')) {
+        return Promise.reject(err)
+      }
+
+      if (isRefreshing) {
+        // Queue this request while refresh is in progress
+        return new Promise((resolve, reject) => {
+          failedQueue.push({ resolve, reject })
+        }).then(token => {
+          originalRequest.headers.Authorization = `Bearer ${token}`
+          return api(originalRequest)
+        }).catch(err => Promise.reject(err))
+      }
+
+      originalRequest._retry = true
+      isRefreshing = true
+
+      const refreshToken = localStorage.getItem('refresh_token')
+      if (!refreshToken) {
+        // No refresh token — force logout
+        localStorage.removeItem('access_token')
+        localStorage.removeItem('refresh_token')
+        window.location.href = '/login'
+        return Promise.reject(err)
+      }
+
+      try {
+        // Attempt to refresh the access token
+        const response = await axios.post(`${API_BASE}/auth/refresh`, {}, {
+          headers: { Authorization: `Bearer ${refreshToken}` }
+        })
+
+        const newToken = response.data.access_token
+        localStorage.setItem('access_token', newToken)
+
+        // Process queued requests with new token
+        processQueue(null, newToken)
+
+        // Retry the original request
+        originalRequest.headers.Authorization = `Bearer ${newToken}`
+        return api(originalRequest)
+      } catch (refreshErr) {
+        // Refresh failed — force logout
+        processQueue(refreshErr, null)
+        localStorage.removeItem('access_token')
+        localStorage.removeItem('refresh_token')
+        window.location.href = '/login'
+        return Promise.reject(refreshErr)
+      } finally {
+        isRefreshing = false
+      }
     }
+
     return Promise.reject(err)
   }
 )
@@ -45,6 +116,8 @@ export const authApi = {
     api.post('/auth/login', { email, password }),
   profile: () =>
     api.get('/auth/profile'),
+  refresh: () =>
+    api.post('/auth/refresh'),
 }
 
 export const diagnosisApi = {
@@ -86,7 +159,6 @@ export const adminApi = {
   trainTextModel: (force = false) => api.post(`/admin/models/train/text?force=${force}`),
   trainImageModel: (epochs = 5) => api.post('/admin/models/train/image', { epochs }),
   trainAllModels: (epochs = 5) => api.post('/admin/models/train/all', { epochs }),
-  // Extended admin endpoints
   getHealth: () => api.get('/admin/health'),
   getMetrics: () => api.get('/admin/metrics'),
   getUsers: (page = 1, limit = 10) => api.get(`/admin/users?page=${page}&limit=${limit}`),

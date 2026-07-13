@@ -5,6 +5,7 @@ from .extensions import db, migrate, jwt
 from .utils.error_handler import register_error_handlers
 from .utils.logger import setup_logging, setup_request_logging
 import logging
+import os
 
 
 def create_app(config_class=Config):
@@ -20,7 +21,8 @@ def create_app(config_class=Config):
     )
     logger.info(f"DOC AI starting in {app.config.get('ENV', 'development')} mode")
 
-    CORS(app, resources={"/api/*": {"origins": "*"}}, supports_credentials=True)
+    allowed_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",")
+    CORS(app, resources={"/api/*": {"origins": allowed_origins}}, supports_credentials=True)
 
     # initialize extensions
     db.init_app(app)
@@ -32,6 +34,17 @@ def create_app(config_class=Config):
 
     # Setup request logging
     setup_request_logging(app)
+
+    # Security headers
+    @app.after_request
+    def add_security_headers(response):
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        response.headers['X-Frame-Options'] = 'DENY'
+        response.headers['X-XSS-Protection'] = '1; mode=block'
+        response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+        response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+        response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+        return response
 
     # JWT error handlers
     @jwt.unauthorized_loader

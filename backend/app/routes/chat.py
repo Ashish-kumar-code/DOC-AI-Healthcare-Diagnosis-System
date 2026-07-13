@@ -43,6 +43,10 @@ def send_message():
     if not session_id or session_id not in active_chats:
         return jsonify({"error": "Invalid or expired session"}), 400
 
+    # Verify session ownership — session_id format is "{user_id}_{timestamp}"
+    if not session_id.startswith(f"{user_id}_"):
+        return jsonify({"error": "Access denied"}), 403
+
     if not user_message:
         return jsonify({"error": "Message cannot be empty"}), 400
 

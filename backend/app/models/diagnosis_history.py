@@ -4,6 +4,9 @@ from ..extensions import db
 
 class DiagnosisHistory(db.Model):
     __tablename__ = "diagnosis_history"
+    __table_args__ = (
+        db.Index('ix_diagnosis_user_created', 'user_id', 'created_at'),
+    )
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False, index=True)
@@ -15,6 +18,8 @@ class DiagnosisHistory(db.Model):
     confidence_score = db.Column(db.Float, nullable=True)
     advice = db.Column(db.Text, nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow, index=True)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    deleted_at = db.Column(db.DateTime, nullable=True, index=True)
 
     user = db.relationship("User", back_populates="diagnosis_history")
     uploaded_images = db.relationship("UploadedImage", back_populates="diagnosis", lazy="dynamic")
@@ -31,4 +36,6 @@ class DiagnosisHistory(db.Model):
             "confidence_score": self.confidence_score,
             "advice": self.advice,
             "created_at": self.created_at.isoformat(),
+            "updated_at": self.updated_at.isoformat() if self.updated_at else None,
+            "deleted_at": self.deleted_at.isoformat() if self.deleted_at else None,
         }

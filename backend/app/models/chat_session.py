@@ -10,6 +10,7 @@ class ChatSession(db.Model):
     messages_json = db.Column(db.JSON, nullable=False)
     summary = db.Column(db.Text, nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow, index=True)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     user = db.relationship("User", back_populates="chat_sessions")
 
@@ -20,4 +21,5 @@ class ChatSession(db.Model):
             "messages_json": self.messages_json,
             "summary": self.summary,
             "created_at": self.created_at.isoformat(),
+            "updated_at": self.updated_at.isoformat() if self.updated_at else None,
         }

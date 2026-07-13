@@ -1,4 +1,5 @@
 from flask import Blueprint, request, jsonify
+from flask_jwt_extended import jwt_required
 
 from ..services.location_service import LocationService
 
@@ -7,6 +8,7 @@ service = LocationService()
 
 
 @location_bp.route("/nearby", methods=["POST"])
+@jwt_required()
 def nearby():
     data = request.get_json() or {}
     latitude = data.get("latitude")
@@ -21,10 +23,11 @@ def nearby():
         results = service.nearby(latitude=float(latitude), longitude=float(longitude), search_type=place_type, radius=radius)
         return jsonify({"status": "ok", "data": results}), 200
     except Exception as exc:
-        return jsonify({"error": "Unable to fetch nearby locations", "detail": str(exc)}), 500
+        return jsonify({"error": "Unable to fetch nearby locations"}), 500
 
 
 @location_bp.route("/manual-search", methods=["POST"])
+@jwt_required()
 def manual_search():
     data = request.get_json() or {}
     query = data.get("query")
@@ -36,4 +39,4 @@ def manual_search():
         results = service.manual_search(query_text=query)
         return jsonify({"status": "ok", "data": results}), 200
     except Exception as exc:
-        return jsonify({"error": "Unable to perform manual search", "detail": str(exc)}), 500
+        return jsonify({"error": "Unable to perform manual search"}), 500

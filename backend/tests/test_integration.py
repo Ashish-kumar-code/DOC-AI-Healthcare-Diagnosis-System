@@ -18,6 +18,7 @@ def integration_client():
         "TESTING": True,
         "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:",
         "JWT_SECRET_KEY": "test-secret",
+        "RATELIMIT_ENABLED": False,
     })
 
     with app.app_context():

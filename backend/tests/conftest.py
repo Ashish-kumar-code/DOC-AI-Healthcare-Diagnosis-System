@@ -15,6 +15,7 @@ def app():
         "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:",
         "JWT_SECRET_KEY": "test-secret-key-for-testing",
         "SECRET_KEY": "test-secret-key",
+        "RATELIMIT_ENABLED": False,  # Disable rate limiting in tests
     })
     return app
 
@@ -33,3 +34,18 @@ def init_database(app):
         yield db
         db.session.remove()
         db.drop_all()
+
+
+@pytest.fixture(scope="session")
+def auth_token(client):
+    """Get a valid JWT token for authenticated test requests."""
+    # Register a test admin user
+    register_res = client.post('/api/auth/register', json={
+        'name': 'Test Admin',
+        'email': 'admin@test.com',
+        'password': 'TestPass123!',
+        'age': 30,
+        'gender': 'male'
+    })
+    data = register_res.get_json()
+    return data.get('access_token')

@@ -6,6 +6,7 @@ Cleaned & Improved Version
 from flask import Blueprint, request, jsonify, send_file
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from marshmallow import ValidationError
+from werkzeug.utils import secure_filename
 import os
 import time
 
@@ -122,7 +123,8 @@ def image_diagnosis():
             upload_dir = os.getenv("UPLOAD_FOLDER", "app/static/uploads")
             os.makedirs(upload_dir, exist_ok=True)
 
-            file_path = os.path.join(upload_dir, f"{user_id}_{int(time.time())}_{file.filename}")
+            safe_name = secure_filename(file.filename)
+            file_path = os.path.join(upload_dir, f"{user_id}_{int(time.time())}_{safe_name}")
             file.save(file_path)
 
             prediction = predict_image(file_path)
@@ -210,7 +212,8 @@ def multimodal_diagnosis():
             if file and file.filename:
                 upload_dir = os.getenv("UPLOAD_FOLDER", "app/static/uploads")
                 os.makedirs(upload_dir, exist_ok=True)
-                file_path = os.path.join(upload_dir, f"{user_id}_{int(time.time())}_{file.filename}")
+                safe_name = secure_filename(file.filename)
+                file_path = os.path.join(upload_dir, f"{user_id}_{int(time.time())}_{safe_name}")
                 file.save(file_path)
 
                 image_pred = predict_image(file_path)

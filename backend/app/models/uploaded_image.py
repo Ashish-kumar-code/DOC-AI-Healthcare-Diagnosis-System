@@ -12,6 +12,8 @@ class UploadedImage(db.Model):
     image_type = db.Column(db.String(64), nullable=True)
     processed_status = db.Column(db.String(64), default="pending")
     created_at = db.Column(db.DateTime, default=datetime.utcnow, index=True)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    deleted_at = db.Column(db.DateTime, nullable=True)
 
     user = db.relationship("User", back_populates="uploaded_images")
     diagnosis = db.relationship("DiagnosisHistory", back_populates="uploaded_images")
@@ -25,4 +27,6 @@ class UploadedImage(db.Model):
             "image_type": self.image_type,
             "processed_status": self.processed_status,
             "created_at": self.created_at.isoformat(),
+            "updated_at": self.updated_at.isoformat() if self.updated_at else None,
+            "deleted_at": self.deleted_at.isoformat() if self.deleted_at else None,
         }

@@ -4,6 +4,9 @@ from ..extensions import db
 
 class NearbySearchCache(db.Model):
     __tablename__ = "nearby_search_cache"
+    __table_args__ = (
+        db.Index('ix_cache_location_type', 'latitude', 'longitude', 'search_type'),
+    )
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=True, index=True)
@@ -12,6 +15,7 @@ class NearbySearchCache(db.Model):
     search_type = db.Column(db.String(64), nullable=False)
     response_json = db.Column(db.JSON, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow, index=True)
+    expires_at = db.Column(db.DateTime, nullable=True, index=True)
 
     user = db.relationship("User", back_populates="nearby_queries")
 
@@ -24,4 +28,5 @@ class NearbySearchCache(db.Model):
             "search_type": self.search_type,
             "response_json": self.response_json,
             "created_at": self.created_at.isoformat(),
+            "expires_at": self.expires_at.isoformat() if self.expires_at else None,
         }

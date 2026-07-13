@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from flask import Blueprint, send_file, jsonify
+from flask_jwt_extended import jwt_required, get_jwt_identity
 from ..models import DiagnosisHistory, User
 from ..extensions import db
 from ..services.report_service import generate_report_pdf
@@ -9,10 +10,16 @@ report_bp = Blueprint("report_bp", __name__)
 
 
 @report_bp.route("/<int:diagnosis_id>/pdf", methods=["GET"])
+@jwt_required()
 def get_pdf_report(diagnosis_id):
+    user_id = get_jwt_identity()
     diagnosis = db.session.get(DiagnosisHistory, diagnosis_id)
     if not diagnosis:
         return jsonify({"error": "Diagnosis not found"}), 404
+
+    # SECURITY: Verify the requesting user owns this diagnosis
+    if str(diagnosis.user_id) != str(user_id):
+        return jsonify({"error": "Access denied"}), 403
 
     user = db.session.get(User, diagnosis.user_id)
 

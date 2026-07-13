@@ -24,13 +24,13 @@ export default function Navbar() {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header role="banner" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5">
+          <Link to="/" className="flex items-center gap-2.5" aria-label="DOC-AI Home">
             <div className="w-9 h-9 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
@@ -41,7 +41,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
             {navLinks.map((link) => (
               /* Dynamic Link Colors: Slates for light mode scroll, muted slate-200/white for dark top */
               <a 
@@ -111,7 +111,7 @@ export default function Navbar() {
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <nav className="flex flex-col gap-2 flex-1">
+              <nav className="flex flex-col gap-2 flex-1" aria-label="Mobile navigation">
                 {navLinks.map((link) => (
                   <a key={link.label} href={link.href} onClick={() => setMenuOpen(false)} className="px-4 py-3 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">
                     {link.label}

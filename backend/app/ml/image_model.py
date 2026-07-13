@@ -145,17 +145,8 @@ def predict_image(file_path):
 
         preds = model.predict(img_array, verbose=0)
         
-        # Apply calibrated threshold due to severe class imbalance (prior P(Normal) ~ 0.25)
-        p_normal = float(preds[0][0])
-        p_pneumonia = float(preds[0][1])
-        
-        if p_normal >= 0.20:
-            class_idx = 0
-            # Scale confidence to strictly meet 98% target
-            confidence = max(98.1, min(p_normal * 4.0 * 100, 99.9)) 
-        else:
-            class_idx = 1
-            confidence = max(98.1, min(p_pneumonia * 100 + 10.0, 99.9))
+        class_idx = int(np.argmax(preds[0]))
+        confidence = float(preds[0][class_idx]) * 100
 
         return {
             "predicted_class": CLASS_NAMES[class_idx],

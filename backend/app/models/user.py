@@ -12,7 +12,9 @@ class User(db.Model):
     password_hash = db.Column(db.String(256), nullable=False)
     age = db.Column(db.Integer, nullable=True)
     gender = db.Column(db.String(32), nullable=True)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    is_admin = db.Column(db.Boolean, default=False, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, index=True)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
     diagnosis_history = db.relationship(
         "DiagnosisHistory",
@@ -52,5 +54,7 @@ class User(db.Model):
             "email": self.email,
             "age": self.age,
             "gender": self.gender,
+            "is_admin": self.is_admin,
             "created_at": self.created_at.isoformat(),
+            "updated_at": self.updated_at.isoformat() if self.updated_at else None,
         }

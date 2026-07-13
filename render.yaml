@@ -3,19 +3,47 @@ services:
     name: doc-ai-backend
     env: python
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: gunicorn backend.run:app --bind 0.0.0.0:$PORT
+    startCommand: cd backend && gunicorn run:app --config gunicorn.conf.py
     envVars:
       - key: FLASK_ENV
         value: production
       - key: JWT_SECRET_KEY
-        generator: secret
+        generateValue: true
       - key: SECRET_KEY
-        generator: secret
+        generateValue: true
       - key: SQLALCHEMY_DATABASE_URI
-        value: sqlite:///doc_ai.db
+        fromDatabase:
+          name: doc-ai-db
+          property: connectionString
+      - key: CORS_ORIGINS
+        value: https://doc-ai-frontend.onrender.com
       - key: GOOGLE_PLACES_API_KEY
         value: ""
       - key: IMAGE_MODEL_PATH
         value: app/ml/image_model.h5
       - key: TEXT_MODEL_PATH
         value: app/ml/text_model.joblib
+      - key: GUNICORN_WORKERS
+        value: "4"
+      - key: GUNICORN_TIMEOUT
+        value: "120"
+
+  - type: web
+    name: doc-ai-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+databases:
+  - name: doc-ai-db
+    plan: free
+    databaseName: doc_ai
+    user: doc_ai_user
