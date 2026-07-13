@@ -8,9 +8,15 @@ services:
       - key: FLASK_ENV
         value: production
       - key: JWT_SECRET_KEY
+<<<<<<< HEAD
         generateValue: true
       - key: SECRET_KEY
         generateValue: true
+=======
+        value: temporary_secret_key_change_me_later
+      - key: SECRET_KEY
+        value: temporary_session_key_change_me_later
+>>>>>>> fdf3b55c0f57d06ab261baabb3f5a33b6ffc5b23
       - key: SQLALCHEMY_DATABASE_URI
         fromDatabase:
           name: doc-ai-db
