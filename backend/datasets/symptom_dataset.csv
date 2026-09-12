@@ -1,0 +1,1001 @@
+age,gender,duration_days,severity,temperature,pain_level,disease,symptom_text
+28,female,6,severe,103.2,5,Malaria,"I have intense headache, high fever with chills, and nausea for 6 days."
+34,male,7,moderate,102.5,7,Flu,"I've been having body aches, dry cough, and high fever for 7 days."
+69,female,5,severe,100.6,6,Flu,"I have extreme tiredness, high fever, and muscle pain for 5 days."
+21,male,7,moderate,103.5,6,Flu,"I have severe body aches, fever, and feel completely drained for 7 days."
+21,male,17,moderate,99.5,6,Bronchitis,I've been wheezing with a persistent cough and feel exhausted for 17 days.
+78,male,10,moderate,102.5,4,Flu,I feel extremely tired with high fever and body pain for the past 10 days.
+80,male,6,moderate,101.4,9,Dengue,"I have high fever, eye pain, and red spots on my skin for 6 days."
+57,male,8,severe,104.7,9,Malaria,"I've had high fever, rigors, and intense joint pain for 8 days."
+41,female,15,moderate,99.1,1,Allergy,"I have nasal congestion, watery eyes, and mild cough for 15 days."
+25,female,7,moderate,98.4,1,Common Cold,I have a low-grade fever with nasal congestion and throat irritation for 7 days.
+67,female,17,mild,98.3,2,Allergy,"I've been having nasal irritation, watery eyes, and skin rash for 17 days."
+62,female,10,moderate,37.3,3,Allergy,"I have nasal congestion, watery eyes and mild cough for 8 days."
+64,female,9,moderate,101.7,7,Dengue,"I have intense joint pain, high fever, and bleeding from gums for 9 days."
+70,male,9,moderate,103.6,5,Typhoid,I've been feeling very weak with sustained fever and poor appetite for 9 days.
+68,male,16,severe,102.1,8,Typhoid,"I've had prolonged fever, abdominal discomfort, and constipation for 16 days."
+51,male,9,severe,101.8,5,Typhoid,"Experiencing continuous fever, stomach discomfort, and fatigue for 9 days."
+29,female,15,moderate,100.9,7,Pneumonia,I've been coughing up phlegm with chest tightness and difficulty breathing for 15 days.
+25,female,28,severe,102.3,5,Typhoid,"I have fever, stomach pain, headache, and feel very weak for 28 days."
+57,female,5,moderate,102.5,6,Flu,"I have a high temperature, dry cough, and can barely get out of bed for 5 days."
+22,female,6,moderate,102.5,7,Pneumonia,I have a deep chest cough with yellow-green sputum and high fever for 6 days.
+25,male,11,severe,103.2,6,Dengue,My body is aching severely with high fever and headache for 11 days.
+56,female,3,moderate,99.8,3,Common Cold,My nose has been running constantly with sneezing and a mild cough for 3 days.
+46,female,17,severe,100.1,4,Bronchitis,I've had a cough that won't go away with mucus and fatigue for 17 days.
+38,female,11,severe,103.3,9,Malaria,I have high temperature with shaking chills and muscle aches for 11 days.
+62,female,10,moderate,99.1,1,Common Cold,My throat feels raw and I have a blocked nose with sneezing for 10 days.
+21,male,19,severe,102.7,7,Pneumonia,"I've been coughing up thick mucus, have chest pain, and a high fever for 19 days."
+25,female,5,severe,38.2,5,Common Cold,"I have mild fever, runny nose, sneezing and sore throat for 3 days."
+20,male,25,severe,103.5,4,Typhoid,"I have persistent high temperature, headache, and diarrhea for 25 days."
+76,male,11,moderate,102.1,8,Typhoid,My fever has been unremitting with stomach pain and weakness for 11 days.
+71,female,18,moderate,102.8,5,Typhoid,"I've had continuous high fever, loose motions, and loss of energy for 18 days."
+80,female,20,severe,99.0,4,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 20 days.
+77,female,3,moderate,98.6,2,Common Cold,I feel congested with a slight sore throat and watery eyes for 3 days.
+46,male,9,severe,102.5,8,Dengue,"Experiencing extreme fatigue, high fever, and aching joints for 9 days."
+24,male,14,severe,101.7,9,Malaria,"I have high fever, severe headache, and joint pain for 14 days."
+67,female,15,severe,98.7,5,Bronchitis,I've been coughing non-stop with chest soreness and mild fever for 15 days.
+78,female,3,mild,99.6,1,Common Cold,"Experiencing congestion, watery eyes, and a scratchy throat for 3 days."
+25,female,10,severe,100.2,6,Flu,"I've had sudden chills, high fever, and intense body pain for 10 days."
+69,male,7,moderate,104.2,8,Dengue,"I've had high fever, nosebleeds, and intense headache for 7 days."
+55,male,27,moderate,102.1,8,Typhoid,"I have sustained fever, weakness, and diarrhea for 27 days."
+19,male,5,mild,39.5,8,Dengue,"I have sudden high fever, nausea and severe body pain for 6 days."
+66,female,19,moderate,102.4,6,Pneumonia,I have a persistent cough with blood-tinged phlegm and fever for 19 days.
+54,male,9,severe,38.8,7,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+73,female,19,moderate,102.0,7,Pneumonia,"I've had chest pain, difficulty breathing, and fever with chills for 19 days."
+42,female,21,moderate,101.7,6,Typhoid,"Experiencing sustained fever, diarrhea, and severe fatigue for 21 days."
+49,female,19,severe,101.5,8,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 19 days."
+70,male,11,severe,103.2,8,Pneumonia,"I have sharp pain in my chest, shortness of breath, and fever for 11 days."
+56,female,24,moderate,101.8,7,Typhoid,"I have sustained high fever, stomach pain, headache, and weakness for 24 days."
+39,female,13,severe,101.5,7,Dengue,"I've been having high fever, rash, and severe headache for the past 13 days."
+80,female,3,severe,103.7,9,Malaria,"I've been having cyclic fever, sweating, and extreme weakness for 3 days."
+71,male,11,mild,98.0,2,Allergy,"I have a runny nose, sneezing, and itchy skin for the past 11 days."
+78,female,9,moderate,103.7,9,Dengue,"I have high fever, severe headache, and pain behind my eyes for 9 days."
+23,female,5,mild,98.6,2,Allergy,My skin has been itchy with sneezing and watery eyes for 5 days.
+58,male,13,moderate,101.6,7,Pneumonia,I've been running a high fever with severe cough and extreme tiredness for 13 days.
+23,male,8,severe,103.9,10,Dengue,"I have excruciating body pain, high fever, and pain behind eyes for 8 days."
+20,female,4,mild,39.6,7,Flu,I have high fever with body pain and weakness for 4 days.
+28,female,7,mild,37.8,7,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+27,male,12,severe,101.0,6,Dengue,"I have high fever, extreme weakness, and pain behind both eyes for 12 days."
+54,female,3,mild,37.7,3,Common Cold,"I have cough, congestion and fatigue for 4 days."
+67,female,9,moderate,100.3,3,Common Cold,I have a mild cough with sore throat and head congestion for 9 days.
+33,female,10,moderate,98.8,1,Allergy,"I have itchy, red eyes, frequent sneezing, and nasal drip for 10 days."
+27,male,17,moderate,103.1,5,Pneumonia,"I've had shortness of breath, persistent cough, and high fever for 17 days."
+37,female,12,severe,39.2,5,Typhoid,I have high fever with rose spots and fatigue for 7 days.
+24,female,4,severe,104.5,6,Malaria,"Experiencing intermittent fever with chills, body aches, and weakness for 4 days."
+53,male,7,mild,98.2,4,Common Cold,"Feeling tired with a stuffy nose, sore throat, and mild headache for 7 days."
+64,male,6,severe,104.0,10,Dengue,"Experiencing extreme fatigue, high fever, and aching joints for 6 days."
+70,male,9,moderate,101.6,7,Flu,"I've had a high temperature with chills, headache, and runny nose for 9 days."
+38,male,8,moderate,101.6,5,Flu,"I have a high temperature, dry cough, and can barely get out of bed for 8 days."
+44,female,28,moderate,98.7,3,Allergy,I have a runny nose with itchy throat and mild skin rash for 28 days.
+19,female,7,moderate,39.3,10,Dengue,I have high fever with pain behind the eyes and muscle pain for 4 days.
+59,male,9,moderate,103.1,5,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 9 days."
+34,female,7,mild,38.6,6,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+36,female,9,moderate,102.3,7,Malaria,"I've had relapsing fever, shivering, and can barely eat for 9 days."
+58,male,14,severe,103.7,8,Dengue,"Experiencing high fever, nausea, and pain all over my body for 14 days."
+63,female,6,severe,102.9,5,Flu,"I have aching joints, high fever, and a dry cough that won't stop for 6 days."
+40,male,14,moderate,101.0,7,Pneumonia,"My chest feels heavy, I have a high fever, and I'm very weak for 14 days."
+61,female,16,moderate,100.8,4,Pneumonia,My chest hurts when I cough and I have a high temperature for 16 days.
+61,male,10,moderate,103.3,8,Dengue,"I have a sudden high fever, severe headache, and muscle cramps for 10 days."
+53,female,12,severe,38.6,4,Bronchitis,I have cough with mucus and shortness of breath for 9 days.
+23,female,11,severe,101.5,7,Dengue,"I've had intense headache behind my eyes, high fever, and fatigue for 11 days."
+23,female,19,moderate,101.4,8,Pneumonia,I can barely breathe and have a high fever with chest tightness for 19 days.
+47,female,7,severe,101.6,4,Flu,"I have aching joints, high fever, and a dry cough that won't stop for 7 days."
+26,male,5,mild,39.9,8,Malaria,"I have high fever with chills and shivering, headache for 6 days."
+23,male,8,moderate,100.7,6,Pneumonia,"I've had stabbing chest pain, productive cough, and high fever for 8 days."
+44,female,5,moderate,38.8,7,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+41,female,19,severe,101.9,6,Pneumonia,"I have fever with chills, cough with phlegm, and difficulty breathing for 19 days."
+65,female,7,severe,103.3,7,Dengue,"I have a high temperature, intense headache, and muscle soreness for 7 days."
+64,male,28,moderate,103.0,6,Typhoid,"I've had continuous high fever, loose motions, and loss of energy for 28 days."
+36,female,6,moderate,103.4,4,Flu,"Experiencing sudden fever, muscle soreness, and loss of energy for 6 days."
+80,male,7,severe,101.2,6,Flu,"Experiencing fever, dry cough, sore throat, and body aches for 7 days."
+20,female,10,severe,102.9,5,Pneumonia,"Experiencing labored breathing, persistent cough, and fever for 10 days."
+47,male,12,moderate,99.8,4,Bronchitis,"Experiencing a barking cough, mucus, and tightness in my chest for 12 days."
+42,male,11,severe,101.8,5,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 11 days."
+35,female,12,moderate,104.0,8,Malaria,I've been shivering with high fever and profuse sweating for 12 days.
+79,male,8,moderate,100.4,4,Common Cold,I have a scratchy throat with congestion and occasional coughing for 8 days.
+79,female,25,moderate,99.3,1,Allergy,My skin has been itchy with sneezing and watery eyes for 25 days.
+44,male,7,mild,100.8,6,Bronchitis,My cough produces a lot of phlegm and I have a mild fever for 7 days.
+48,male,4,moderate,103.1,7,Flu,"I have sudden onset fever, chills, and severe muscle pain for 4 days."
+62,female,9,moderate,40.0,7,Typhoid,"I have fever, loss of appetite, constipation and abdominal pain for 9 days."
+57,female,10,severe,38.7,6,Bronchitis,"I have persistent cough, chest discomfort and mild fever for 10 days."
+40,female,1,moderate,98.6,3,Allergy,"I have hives on my skin, runny nose, and itchy throat for 1 days."
+28,female,7,moderate,101.2,5,Flu,"I have chills, aching muscles, and a persistent dry cough for 7 days."
+75,female,18,moderate,101.4,6,Bronchitis,"I have a deep wet cough, wheezing, and feeling of heaviness in chest for 18 days."
+47,male,10,moderate,103.8,7,Typhoid,"I've been having persistent fever, loss of appetite, and abdominal pain for 10 days."
+61,male,19,moderate,102.0,6,Pneumonia,I have a persistent cough with blood-tinged phlegm and fever for 19 days.
+80,male,14,moderate,102.1,9,Dengue,"I've been having high fever, rash, and severe headache for the past 14 days."
+59,male,7,moderate,101.9,9,Dengue,"I have fever, retro-orbital pain, and my joints are very painful for 7 days."
+35,male,14,severe,101.3,7,Dengue,I've had sudden onset of high fever with severe muscle pain for 14 days.
+21,male,10,severe,102.4,8,Typhoid,"Experiencing continuous fever, stomach discomfort, and fatigue for 10 days."
+73,male,5,mild,100.2,1,Common Cold,My throat feels raw and I have a blocked nose with sneezing for 5 days.
+44,female,11,severe,101.1,7,Typhoid,"I've been having sustained fever, poor appetite, and constipation for 11 days."
+26,female,13,moderate,105.0,6,Malaria,"Experiencing intermittent fever with chills, body aches, and weakness for 13 days."
+55,female,18,moderate,98.5,3,Allergy,"I have an itchy throat, runny nose, and swollen eyes for 18 days."
+72,male,25,severe,102.4,8,Typhoid,I've been running a continuous fever with weakness and no appetite for 25 days.
+26,male,28,moderate,99.4,3,Allergy,"I've been having itchy eyes, nasal congestion, and hives for 28 days."
+59,female,7,moderate,39.6,8,Dengue,"I have sudden high fever, nausea and severe body pain for 6 days."
+47,male,19,severe,99.7,3,Bronchitis,"I have chest tightness, productive cough, and wheezing for the past 19 days."
+33,male,10,mild,100.2,1,Common Cold,"I have a head cold with sneezing, congestion, and watery eyes for 10 days."
+62,female,14,severe,103.5,7,Typhoid,My fever has been unremitting with stomach pain and weakness for 14 days.
+53,male,7,severe,104.2,5,Malaria,"I have a very high temperature, body aches, and vomiting for 7 days."
+72,male,12,severe,100.6,6,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 12 days."
+73,male,28,moderate,102.0,7,Typhoid,"I have persistent high temperature, headache, and diarrhea for 28 days."
+28,female,14,severe,100.0,5,Bronchitis,"I have a lingering cough, sore chest, and feel run down for 14 days."
+30,female,3,moderate,103.2,6,Flu,I've been having chills and fever with severe headache and cough for 3 days.
+67,male,20,severe,101.3,5,Pneumonia,I have a persistent cough with blood-tinged phlegm and fever for 20 days.
+19,male,20,moderate,101.6,4,Pneumonia,"I have difficulty breathing, sharp chest pain, and a productive cough for 20 days."
+67,male,8,severe,103.8,8,Dengue,"I have excruciating body pain, high fever, and pain behind eyes for 8 days."
+55,female,9,moderate,101.1,6,Dengue,"Experiencing high fever, bleeding gums, and extreme body aches for 9 days."
+33,female,8,moderate,104.9,9,Malaria,"I've had relapsing fever, shivering, and can barely eat for 8 days."
+42,female,18,moderate,99.4,2,Allergy,I've been having skin rash with nasal congestion and watery eyes for 18 days.
+42,male,22,moderate,98.2,2,Allergy,I've been having skin rash with nasal congestion and watery eyes for 22 days.
+21,male,6,moderate,103.1,7,Dengue,"I have a sudden high fever, severe headache, and muscle cramps for 6 days."
+34,male,12,moderate,98.9,3,Allergy,"I have hives on my skin, runny nose, and itchy throat for 12 days."
+79,male,8,moderate,103.1,5,Pneumonia,"I've had stabbing chest pain, productive cough, and high fever for 8 days."
+76,male,10,severe,102.3,5,Typhoid,I have a persistent high fever with abdominal pain and extreme tiredness for 10 days.
+33,male,14,severe,104.3,8,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 14 days."
+26,male,9,moderate,39.3,8,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+65,female,4,mild,98.6,1,Common Cold,I've been sneezing a lot with nasal congestion and mild headache for 4 days.
+36,male,4,moderate,98.4,1,Common Cold,"Experiencing watery eyes, constant sneezing, and nasal drip for 4 days."
+45,female,12,moderate,37.8,4,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+29,male,5,moderate,38.0,4,Common Cold,"I have mild fever, runny nose, sneezing and sore throat for 3 days."
+26,male,5,moderate,38.0,4,Common Cold,"I have cough, congestion and fatigue for 4 days."
+73,male,21,severe,100.8,7,Pneumonia,I have a deep chest cough with yellow-green sputum and high fever for 21 days.
+60,female,3,severe,100.8,5,Flu,"I've had a high fever with body aches, headache, and sore throat for 3 days."
+65,male,21,severe,102.1,6,Pneumonia,"I have difficulty breathing, sharp chest pain, and a productive cough for 21 days."
+50,male,14,severe,102.7,8,Typhoid,"Experiencing continuous fever, stomach discomfort, and fatigue for 14 days."
+46,female,13,severe,103.7,6,Typhoid,"Experiencing sustained fever, diarrhea, and severe fatigue for 13 days."
+54,male,20,moderate,98.2,3,Allergy,"Experiencing persistent sneezing, congestion, and itchy skin for 20 days."
+77,female,17,moderate,103.9,5,Pneumonia,"I've had stabbing chest pain, productive cough, and high fever for 17 days."
+47,female,28,moderate,97.8,3,Allergy,"Experiencing constant sneezing, itchy eyes, and mild congestion for 28 days."
+79,female,16,moderate,102.6,4,Pneumonia,"My chest feels heavy, I have a high fever, and I'm very weak for 16 days."
+19,female,5,moderate,101.6,10,Dengue,My fever is very high with extreme body aches and eye pain for 5 days.
+38,male,7,mild,99.1,1,Common Cold,"Experiencing throat discomfort, congestion, and frequent sneezing for 7 days."
+63,female,8,moderate,104.0,4,Typhoid,"I have sustained high fever, stomach pain, headache, and weakness for 8 days."
+51,female,15,mild,101.3,3,Bronchitis,"I have a deep wet cough, wheezing, and feeling of heaviness in chest for 15 days."
+76,female,28,moderate,103.3,7,Typhoid,"Experiencing steady high fever, fatigue, and stomach pain for 28 days."
+47,male,14,severe,101.7,9,Malaria,"Experiencing high fever episodes, severe headache, and body pain for 14 days."
+51,male,7,severe,101.7,5,Pneumonia,"I have difficulty breathing, sharp chest pain, and a productive cough for 7 days."
+18,female,4,severe,102.9,6,Flu,"I have aching joints, high fever, and a dry cough that won't stop for 4 days."
+44,male,10,severe,38.8,4,Bronchitis,I have cough with mucus and shortness of breath for 9 days.
+56,male,17,severe,101.6,6,Typhoid,"I've had high fever, abdominal bloating, and extreme weakness for 17 days."
+55,female,6,severe,104.2,6,Dengue,"Experiencing high fever, nausea, and pain all over my body for 6 days."
+36,female,6,severe,100.7,4,Flu,"I have sudden onset fever, chills, and severe muscle pain for 6 days."
+37,male,12,severe,101.2,8,Dengue,My fever is very high with extreme body aches and eye pain for 12 days.
+73,female,14,severe,103.3,8,Dengue,"I have a sudden high fever, severe headache, and muscle cramps for 14 days."
+77,female,20,moderate,98.6,2,Allergy,"I've had itchy, watery eyes, constant sneezing, and nasal congestion for 20 days."
+74,male,8,severe,103.5,7,Flu,My fever hit suddenly with dry cough and extreme muscle soreness for 8 days.
+27,male,7,moderate,102.9,6,Pneumonia,"I have chest pain when I breathe, along with fever and fatigue for 7 days."
+48,female,9,severe,100.5,4,Flu,My whole body hurts with high fever and I feel completely exhausted for 9 days.
+46,male,14,moderate,101.8,6,Pneumonia,"I've had stabbing chest pain, productive cough, and high fever for 14 days."
+27,female,12,moderate,101.1,5,Pneumonia,"Feeling very weak with high fever, chills, and coughing up mucus for 12 days."
+59,female,13,mild,101.4,3,Bronchitis,"I've been dealing with chest tightness, cough, and wheezing for 13 days."
+56,female,4,severe,101.1,7,Malaria,"I have a very high temperature, body aches, and vomiting for 4 days."
+19,male,4,severe,37.1,5,Allergy,"I have nasal congestion, watery eyes and mild cough for 8 days."
+57,male,28,severe,102.9,4,Typhoid,"I've been sick with continuous fever, headache, and abdominal pain for 28 days."
+73,female,12,moderate,102.2,8,Malaria,"I've had relapsing fever, shivering, and can barely eat for 12 days."
+31,female,18,severe,101.2,6,Bronchitis,"I have a deep wet cough, wheezing, and feeling of heaviness in chest for 18 days."
+29,male,10,severe,102.7,5,Pneumonia,"I have fever with chills, cough with phlegm, and difficulty breathing for 10 days."
+19,female,14,severe,100.5,4,Pneumonia,I have a persistent cough with blood-tinged phlegm and fever for 14 days.
+49,female,12,mild,98.3,2,Allergy,"I have an itchy throat, runny nose, and swollen eyes for 12 days."
+33,male,10,moderate,102.4,4,Flu,"My fever started suddenly with chills, cough, and weakness for 10 days."
+25,male,9,moderate,103.7,9,Malaria,"I feel extremely weak with high fever, headache, and body pain for 9 days."
+55,male,6,moderate,101.3,4,Flu,I've had sudden high fever with body pain and weakness for 6 days.
+67,female,17,severe,100.4,6,Bronchitis,"I have chest congestion, a productive cough, and fatigue for 17 days."
+69,male,6,severe,103.1,9,Malaria,"I have periodic high fever, nausea, and severe body aches for 6 days."
+62,male,26,moderate,99.0,1,Allergy,"Experiencing constant sneezing, itchy eyes, and mild congestion for 26 days."
+50,male,7,moderate,100.1,2,Common Cold,I have a scratchy throat with congestion and occasional coughing for 7 days.
+40,female,18,mild,100.7,5,Bronchitis,"I have a deep wet cough, wheezing, and feeling of heaviness in chest for 18 days."
+60,female,8,severe,98.7,5,Bronchitis,"I've been dealing with chest tightness, cough, and wheezing for 8 days."
+75,female,11,severe,103.7,7,Typhoid,"I have prolonged fever, headache, and abdominal cramps for 11 days."
+32,female,8,moderate,100.2,6,Flu,"Experiencing chills, headache, muscle pain, and loss of appetite for 8 days."
+68,male,10,moderate,104.2,7,Typhoid,"I have persistent high temperature, headache, and diarrhea for 10 days."
+43,male,14,mild,98.9,3,Allergy,"My allergies are acting up with sneezing, congestion, and hives for 14 days."
+64,male,5,severe,102.3,5,Flu,I've been having chills and fever with severe headache and cough for 5 days.
+30,male,3,mild,98.6,4,Common Cold,My throat feels raw and I have a blocked nose with sneezing for 3 days.
+32,male,7,mild,98.8,2,Common Cold,I've been sneezing with a runny nose and mild body pain for about 7 days.
+40,female,18,severe,99.3,6,Bronchitis,"I have wheezing, a persistent cough, and mild fever for 18 days."
+36,male,18,mild,99.3,4,Bronchitis,I've been coughing with thick mucus and feel short of breath for 18 days.
+49,male,8,moderate,100.0,3,Common Cold,I have a scratchy throat with congestion and occasional coughing for 8 days.
+64,male,10,moderate,102.2,10,Dengue,"I have high fever, eye pain, and red spots on my skin for 10 days."
+63,male,5,mild,37.9,6,Common Cold,"I have cough, congestion and fatigue for 4 days."
+33,male,4,moderate,39.6,6,Flu,"I have high fever, dry cough, severe body ache and extreme fatigue for 5 days."
+58,female,3,moderate,101.5,6,Malaria,"Experiencing intermittent fever with chills, body aches, and weakness for 3 days."
+78,female,6,severe,102.9,5,Flu,"I have fever, severe headache, body aches, and no appetite for 6 days."
+60,male,4,moderate,101.0,7,Dengue,"I've been feeling terrible with high fever, joint pain, and fatigue for 4 days."
+37,female,11,moderate,98.4,1,Allergy,"I have blocked nose, watery eyes, and itching all over for 11 days."
+54,male,9,severe,102.9,7,Dengue,I've had sudden onset of high fever with severe muscle pain for 9 days.
+25,male,9,mild,99.4,3,Common Cold,"I have a runny nose, sneezing, and a sore throat for 9 days."
+74,female,25,moderate,101.9,5,Typhoid,"Experiencing steady fever, headache, and stomach pain for the past 25 days."
+78,male,3,severe,104.2,5,Malaria,"I've had high fever, rigors, and intense joint pain for 3 days."
+76,female,18,moderate,98.6,1,Allergy,"I've been dealing with hives, sneezing, and runny nose for 18 days."
+46,male,7,severe,40.2,7,Malaria,I have fever with chills and vomiting for 7 days.
+78,male,5,moderate,99.3,4,Common Cold,"I've had nasal congestion, a mild cough, and feel run down for 5 days."
+46,male,21,moderate,101.9,8,Typhoid,I have high fever with coated tongue and abdominal tenderness for 21 days.
+78,female,30,moderate,97.5,2,Allergy,"I've been having nasal irritation, watery eyes, and skin rash for 30 days."
+72,male,12,moderate,102.0,9,Dengue,"I've been feeling terrible with high fever, joint pain, and fatigue for 12 days."
+21,female,20,moderate,100.2,3,Bronchitis,I have a continuous cough with yellowish mucus and mild body aches for 20 days.
+79,female,9,severe,100.0,5,Flu,My fever hit suddenly with dry cough and extreme muscle soreness for 9 days.
+59,male,15,severe,103.5,8,Pneumonia,My breathing is shallow and painful with a high fever for the last 15 days.
+63,female,11,moderate,104.0,7,Typhoid,"Experiencing steady high fever, fatigue, and stomach pain for 11 days."
+69,male,7,moderate,100.1,5,Flu,My fever hit suddenly with dry cough and extreme muscle soreness for 7 days.
+54,female,7,severe,103.0,7,Pneumonia,"I've had chest pain, difficulty breathing, and fever with chills for 7 days."
+18,female,4,moderate,101.1,6,Flu,"Experiencing chills, headache, muscle pain, and loss of appetite for 4 days."
+76,female,16,severe,104.5,8,Typhoid,"I've been sick with continuous fever, headache, and abdominal pain for 16 days."
+39,female,8,mild,39.8,7,Malaria,"I have high fever with chills and shivering, headache for 6 days."
+61,female,7,severe,103.2,5,Typhoid,"I've had high fever, abdominal bloating, and extreme weakness for 7 days."
+46,female,3,mild,37.5,6,Common Cold,"I have headache, mild body pain and watery eyes for 2 days."
+46,female,12,moderate,103.5,6,Malaria,I have high temperature with shaking chills and muscle aches for 12 days.
+35,male,20,moderate,99.8,6,Bronchitis,"Experiencing persistent coughing, mucus production, and fatigue for 20 days."
+37,female,20,severe,101.5,5,Typhoid,I have high fever with coated tongue and abdominal tenderness for 20 days.
+18,female,10,moderate,105.0,6,Malaria,"I've had high fever, rigors, and intense joint pain for 10 days."
+40,male,11,moderate,99.2,3,Bronchitis,I've been coughing up mucus for 11 days with wheezing and tiredness.
+57,female,15,severe,104.0,4,Typhoid,"I have sustained fever, weakness, and diarrhea for 15 days."
+23,female,13,moderate,103.9,5,Malaria,Experiencing periodic fever with intense sweating and muscle aches for 13 days.
+38,female,10,severe,101.8,7,Dengue,"I have a sudden high fever, severe headache, and muscle cramps for 10 days."
+50,male,2,mild,37.8,4,Common Cold,"I have headache, mild body pain and watery eyes for 2 days."
+45,female,7,mild,40.4,9,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+55,female,13,severe,103.9,7,Pneumonia,"Experiencing rapid breathing, chest pain, and persistent fever for 13 days."
+76,female,11,severe,101.6,6,Typhoid,"I've had prolonged fever, abdominal discomfort, and constipation for 11 days."
+18,female,9,moderate,99.9,4,Common Cold,"I've had nasal congestion, a mild cough, and feel run down for 9 days."
+23,male,20,moderate,101.2,3,Bronchitis,"Experiencing mucus-producing cough, chest tightness, and fatigue for 20 days."
+31,female,5,mild,37.1,4,Allergy,I have itching and hives after exposure to dust for 3 days.
+70,female,3,mild,99.1,3,Common Cold,My nose is stuffy and I have a mild sore throat with tiredness for 3 days.
+38,male,4,moderate,102.2,6,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 4 days."
+62,female,15,moderate,98.9,1,Allergy,"I've been sneezing constantly with itchy, watery eyes for 15 days."
+43,male,14,severe,101.1,8,Pneumonia,"I have difficulty breathing, sharp chest pain, and a productive cough for 14 days."
+21,male,5,moderate,37.9,6,Common Cold,"I have mild fever, runny nose, sneezing and sore throat for 3 days."
+54,male,7,mild,99.5,6,Bronchitis,My cough has been getting worse with wheezing and mild fever for 7 days.
+37,male,5,severe,37.2,2,Allergy,I have itching and hives after exposure to dust for 3 days.
+31,female,5,moderate,38.3,4,Common Cold,"I have cough, congestion and fatigue for 4 days."
+47,female,21,moderate,103.3,4,Pneumonia,I have a persistent cough with blood-tinged phlegm and fever for 21 days.
+45,female,8,moderate,40.7,9,Malaria,I have fever with chills and vomiting for 7 days.
+20,female,16,severe,101.2,7,Typhoid,"I've had high fever, loss of appetite, and constipation for 16 days."
+69,female,22,moderate,99.4,3,Allergy,"I have itchy, red eyes, frequent sneezing, and nasal drip for 22 days."
+29,male,24,severe,103.0,4,Typhoid,"I have fever, stomach pain, headache, and feel very weak for 24 days."
+55,female,18,mild,100.1,6,Bronchitis,"I have chest tightness, productive cough, and wheezing for the past 18 days."
+50,female,7,moderate,101.8,5,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 7 days."
+44,female,13,severe,103.8,8,Malaria,"Experiencing high fever episodes, severe headache, and body pain for 13 days."
+23,male,21,moderate,103.7,8,Typhoid,"I've had continuous high fever, loose motions, and loss of energy for 21 days."
+37,female,20,severe,103.2,4,Typhoid,"I've been sick with continuous fever, headache, and abdominal pain for 20 days."
+54,male,6,severe,38.6,8,Flu,"I have chills, headache, muscle pain and loss of appetite for 6 days."
+66,female,4,severe,101.4,4,Flu,"Experiencing high fever, nasal congestion, and extreme body pain for 4 days."
+18,male,4,severe,102.5,9,Malaria,"My fever comes and goes with chills, headache, and fatigue for 4 days."
+28,male,4,mild,39.6,8,Flu,"I have high fever, dry cough, severe body ache and extreme fatigue for 5 days."
+23,female,17,moderate,101.4,4,Pneumonia,I can barely breathe and have a high fever with chest tightness for 17 days.
+78,male,12,mild,101.0,6,Bronchitis,I've had a rattling cough with mucus and chest soreness for about 12 days.
+64,male,13,moderate,98.7,3,Allergy,"I have sneezing, itchy eyes, runny nose, and skin rash for 13 days."
+50,female,16,moderate,99.2,1,Allergy,"Experiencing sneezing fits, watery eyes, and an itchy throat for 16 days."
+39,male,14,moderate,101.1,5,Bronchitis,"I have chest congestion, a productive cough, and fatigue for 14 days."
+34,female,9,severe,103.0,9,Dengue,I have high fever with bruising easily and extreme tiredness for 9 days.
+80,female,18,mild,100.8,3,Bronchitis,I have a hacking cough with mucus and my chest hurts for 18 days.
+56,male,14,severe,101.4,7,Malaria,"Experiencing high fever episodes, severe headache, and body pain for 14 days."
+46,male,2,severe,37.9,5,Common Cold,"I have mild fever, runny nose, sneezing and sore throat for 3 days."
+76,female,20,severe,102.9,5,Typhoid,"I've been sick with continuous fever, headache, and abdominal pain for 20 days."
+58,female,17,moderate,102.7,5,Pneumonia,"I've had chest pain, difficulty breathing, and fever with chills for 17 days."
+45,male,11,moderate,102.2,5,Malaria,"I have periodic high fever, nausea, and severe body aches for 11 days."
+38,male,12,mild,37.9,5,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+42,female,3,mild,99.1,3,Common Cold,I've been sneezing with a runny nose and mild body pain for about 3 days.
+32,male,13,severe,102.1,8,Dengue,"I've had high fever, pain behind eyes, and petechial rash for 13 days."
+27,female,10,mild,39.8,9,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+40,female,30,mild,98.7,1,Allergy,"I've had sneezing episodes, nasal congestion, and eye irritation for 30 days."
+76,male,9,severe,102.0,7,Dengue,I've been running a high fever with severe body pain and rash for 9 days.
+32,male,9,mild,98.6,2,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 9 days."
+50,female,20,severe,103.4,7,Pneumonia,I have a persistent cough with blood-tinged phlegm and fever for 20 days.
+24,female,7,moderate,102.4,8,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 7 days."
+32,female,4,mild,98.8,3,Common Cold,"I have congestion, post-nasal drip, and sneezing since 4 days."
+77,female,3,moderate,102.7,6,Flu,I feel extremely tired with high fever and body pain for the past 3 days.
+56,male,16,severe,99.8,5,Bronchitis,"Experiencing a nagging cough, mild fever, and sore chest for 16 days."
+66,female,9,moderate,104.4,7,Malaria,I've been feeling very weak with recurring fever and sweating for 9 days.
+28,female,7,severe,102.0,7,Pneumonia,"I have chest pain when I breathe, along with fever and fatigue for 7 days."
+67,female,23,moderate,103.7,4,Typhoid,"I've been sick with continuous fever, headache, and abdominal pain for 23 days."
+35,female,17,moderate,102.7,5,Typhoid,"Experiencing high fever, constipation, and extreme fatigue for 17 days."
+49,female,20,moderate,97.9,3,Allergy,"I have congestion, itchy eyes, and a scratchy throat for 20 days."
+50,male,7,severe,102.5,8,Malaria,"I've had bouts of fever with sweating, headache, and vomiting for 7 days."
+66,male,13,severe,101.5,6,Malaria,I have fever with chills and vomiting for 13 days.
+49,female,18,severe,98.9,5,Bronchitis,I have a deep cough producing clear mucus with mild chest pain for 18 days.
+76,male,5,moderate,102.0,9,Malaria,"Experiencing intermittent fever with chills, body aches, and weakness for 5 days."
+74,male,22,severe,104.4,4,Typhoid,I have a persistent high fever with abdominal pain and extreme tiredness for 22 days.
+66,male,13,mild,100.5,3,Bronchitis,"I have difficulty breathing, persistent cough, and mild temperature for 13 days."
+41,female,6,mild,40.5,8,Malaria,"I have cyclic fever, sweating and extreme weakness for 5 days."
+79,male,5,mild,98.2,1,Common Cold,"Experiencing congestion, watery eyes, and a scratchy throat for 5 days."
+62,male,4,severe,101.3,8,Malaria,I have alternating chills and fever with extreme fatigue for 4 days.
+70,male,9,moderate,102.8,6,Malaria,Experiencing periodic fever with intense sweating and muscle aches for 9 days.
+42,male,7,severe,102.3,5,Malaria,"My fever comes and goes with chills, headache, and fatigue for 7 days."
+29,male,17,moderate,99.5,4,Bronchitis,My chest feels sore from constant coughing with mucus for 17 days.
+58,female,2,moderate,97.5,3,Allergy,"I have an itchy throat, runny nose, and swollen eyes for 2 days."
+69,female,23,moderate,101.7,7,Typhoid,"I've been having persistent fever, loss of appetite, and abdominal pain for 23 days."
+43,female,13,mild,99.7,3,Bronchitis,"I have chest tightness, productive cough, and wheezing for the past 13 days."
+27,male,6,moderate,102.6,8,Dengue,"I've been having high fever, rash, and severe headache for the past 6 days."
+77,male,15,severe,102.8,7,Typhoid,"I've had high fever, abdominal bloating, and extreme weakness for 15 days."
+38,male,8,severe,101.0,7,Dengue,"I've been feeling terrible with high fever, joint pain, and fatigue for 8 days."
+66,male,8,severe,102.2,7,Dengue,"I've had intense headache behind my eyes, high fever, and fatigue for 8 days."
+54,female,10,severe,102.5,5,Malaria,"My fever comes and goes with chills, headache, and fatigue for 10 days."
+72,female,4,moderate,101.3,6,Dengue,"I've been having high fever, eye pain, and my muscles are very sore for 4 days."
+63,male,5,severe,102.0,7,Flu,"I have a high fever, aching muscles, and a very sore throat for 5 days."
+68,female,13,severe,102.6,7,Malaria,Experiencing periodic fever with intense sweating and muscle aches for 13 days.
+73,male,12,moderate,104.2,9,Malaria,"Experiencing high fever, body aches, and nausea for the past 12 days."
+78,female,14,severe,102.0,8,Pneumonia,My breathing is shallow and painful with a high fever for the last 14 days.
+41,female,18,mild,100.7,3,Bronchitis,I've been coughing heavily with mucus discharge and chest discomfort for 18 days.
+44,female,6,severe,102.2,7,Flu,I've been having chills and fever with severe headache and cough for 6 days.
+45,female,10,moderate,99.8,3,Common Cold,Sneezing constantly with a blocked nose and slight headache for the past 10 days.
+54,male,4,moderate,40.0,9,Dengue,"I have high fever, severe headache, joint pain and rash for 5 days."
+43,female,4,mild,98.6,2,Common Cold,"Experiencing congestion, watery eyes, and a scratchy throat for 4 days."
+37,male,5,moderate,103.2,6,Pneumonia,"I have sharp pain in my chest, shortness of breath, and fever for 5 days."
+53,female,5,severe,104.0,10,Dengue,My body is aching severely with high fever and headache for 5 days.
+77,female,24,moderate,98.9,3,Allergy,"Experiencing nasal drip, sneezing, and puffy eyes for 24 days."
+61,male,13,moderate,103.1,9,Malaria,"Experiencing intermittent fever with chills, body aches, and weakness for 13 days."
+29,male,10,severe,101.4,3,Bronchitis,I've been coughing non-stop with chest soreness and mild fever for 10 days.
+24,male,11,moderate,102.4,5,Malaria,I've been vomiting with high fever and severe body aches for 11 days.
+24,male,8,severe,100.8,6,Flu,"I've been feeling awful with high fever, chills, and cough for 8 days."
+32,male,9,moderate,98.2,1,Common Cold,"I've had a runny nose, mild cough, and body aches for about 9 days."
+64,male,5,moderate,101.4,6,Flu,"I have a high temperature, dry cough, and can barely get out of bed for 5 days."
+78,female,7,severe,103.1,8,Pneumonia,"Experiencing rapid breathing, chest pain, and persistent fever for 7 days."
+42,male,3,severe,100.9,6,Flu,"I have a high fever, aching muscles, and a very sore throat for 3 days."
+68,female,11,moderate,102.5,7,Dengue,"I have high fever, severe headache, and pain behind my eyes for 11 days."
+26,male,5,severe,39.8,7,Flu,"I have high fever, dry cough, severe body ache and extreme fatigue for 5 days."
+38,female,19,moderate,103.9,7,Pneumonia,"I've had a wet cough, high fever, and feel extremely fatigued for 19 days."
+30,male,8,severe,102.4,5,Flu,"I've had fever, sore throat, runny nose, and extreme weakness for 8 days."
+33,female,8,moderate,104.0,8,Dengue,"Experiencing high fever, bleeding gums, and extreme body aches for 8 days."
+54,male,3,mild,98.9,2,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 3 days."
+73,male,8,severe,103.5,7,Malaria,"I have high fever with chills and shivering, along with headache for 8 days."
+61,female,12,severe,104.0,6,Malaria,Experiencing periodic fever with intense sweating and muscle aches for 12 days.
+30,male,16,moderate,100.2,4,Bronchitis,"I have difficulty breathing, persistent cough, and mild temperature for 16 days."
+35,male,9,moderate,98.9,4,Common Cold,I have a low-grade fever with nasal congestion and throat irritation for 9 days.
+52,male,3,moderate,98.2,3,Common Cold,"Experiencing throat discomfort, congestion, and frequent sneezing for 3 days."
+27,male,15,moderate,101.3,5,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 15 days.
+68,female,7,severe,100.5,4,Bronchitis,"Experiencing persistent coughing, mucus production, and fatigue for 7 days."
+18,female,4,moderate,101.1,6,Dengue,I have severe joint and muscle pain with high fever for 4 days.
+29,female,24,moderate,103.5,6,Typhoid,I've been running a high fever with stomach pain and no appetite for 24 days.
+30,female,4,mild,39.7,9,Dengue,"I have sudden high fever, nausea and severe body pain for 6 days."
+25,female,17,severe,102.4,8,Typhoid,"I have sustained high fever, stomach pain, headache, and weakness for 17 days."
+50,female,4,mild,100.0,2,Common Cold,"I have congestion, post-nasal drip, and sneezing since 4 days."
+52,female,8,moderate,101.9,5,Pneumonia,I can barely breathe and have a high fever with chest tightness for 8 days.
+77,female,8,severe,102.7,5,Typhoid,My fever won't go down and I have stomach pain with headache for 8 days.
+42,female,7,severe,38.5,8,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+44,female,15,severe,103.5,4,Pneumonia,"I have difficulty breathing, sharp chest pain, and a productive cough for 15 days."
+31,female,6,moderate,100.2,4,Common Cold,"I feel under the weather with sneezing, runny nose, and mild fatigue for 6 days."
+45,male,8,severe,102.9,8,Pneumonia,"Experiencing severe fatigue, high fever, and coughing with phlegm for 8 days."
+34,female,11,severe,99.2,3,Bronchitis,I have a persistent cough with mucus production and chest discomfort for 11 days.
+27,male,9,moderate,103.4,8,Pneumonia,"I have shaking chills, high fever, and a painful cough for 9 days."
+18,male,6,mild,98.6,1,Common Cold,I have a mild cough with sore throat and head congestion for 6 days.
+42,male,7,moderate,100.8,5,Bronchitis,I have a continuous cough with yellowish mucus and mild body aches for 7 days.
+50,male,9,severe,101.9,7,Dengue,"I've been having high fever, eye pain, and my muscles are very sore for 9 days."
+51,female,9,mild,99.7,1,Common Cold,"Experiencing throat discomfort, congestion, and frequent sneezing for 9 days."
+69,female,14,moderate,103.2,8,Malaria,"My fever comes and goes with chills, headache, and fatigue for 14 days."
+39,male,3,moderate,98.4,4,Common Cold,"I have a runny nose, sneezing, and a sore throat for 3 days."
+33,male,10,moderate,38.1,6,Bronchitis,"I have persistent cough, chest discomfort and mild fever for 10 days."
+46,male,4,mild,97.9,2,Allergy,"I have itchy, red eyes, frequent sneezing, and nasal drip for 4 days."
+32,female,6,moderate,99.2,4,Common Cold,I have sneezing episodes with a runny nose and mild body aches for 6 days.
+74,female,13,severe,99.6,6,Bronchitis,"Experiencing chest discomfort, cough with sputum, and tiredness for 13 days."
+47,male,18,moderate,99.0,1,Allergy,I have a runny nose with itchy throat and mild skin rash for 18 days.
+68,female,5,mild,98.7,1,Common Cold,I have a low-grade fever with nasal congestion and throat irritation for 5 days.
+69,male,7,moderate,101.4,6,Flu,"I've been feeling awful with high fever, chills, and cough for 7 days."
+64,female,4,mild,100.4,2,Common Cold,"I have nasal congestion, mild headache, and fatigue for 4 days."
+25,female,8,mild,99.5,3,Common Cold,I've been sneezing a lot with nasal congestion and mild headache for 8 days.
+32,male,4,moderate,39.6,8,Flu,"I have high fever, dry cough, severe body ache and extreme fatigue for 5 days."
+76,male,9,severe,101.9,7,Flu,"I've had fever, sore throat, runny nose, and extreme weakness for 9 days."
+50,female,14,moderate,101.4,6,Malaria,"I have high fever, severe headache, and joint pain for 14 days."
+42,female,7,moderate,38.9,8,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+62,female,26,severe,104.1,7,Typhoid,I've been running a continuous fever with weakness and no appetite for 26 days.
+72,male,19,mild,97.8,1,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 19 days."
+32,male,18,severe,103.8,5,Pneumonia,I have a deep cough with greenish phlegm and chest discomfort for 18 days.
+50,male,8,moderate,99.7,2,Common Cold,I've had a sore throat and runny nose with occasional sneezing for 8 days.
+29,male,29,moderate,99.0,1,Allergy,"I have swollen nasal passages, watery eyes, and skin rash for 29 days."
+25,female,13,moderate,102.8,8,Pneumonia,"I've had chest pain, difficulty breathing, and fever with chills for 13 days."
+69,female,5,mild,100.5,1,Common Cold,"I have congestion, mild body aches, and a sore throat for the past 5 days."
+18,female,11,moderate,102.6,7,Typhoid,"Experiencing steady fever, headache, and stomach pain for the past 11 days."
+79,female,3,severe,101.4,5,Malaria,I have fever that spikes suddenly with chills and nausea for 3 days.
+26,male,5,moderate,99.9,4,Common Cold,I've been sneezing with a runny nose and mild body pain for about 5 days.
+50,female,22,severe,102.5,6,Typhoid,"I have prolonged fever, headache, and abdominal cramps for 22 days."
+69,male,26,mild,98.3,3,Allergy,My skin has been itchy with sneezing and watery eyes for 26 days.
+29,female,9,mild,99.4,1,Common Cold,I have a mild cough with sore throat and head congestion for 9 days.
+34,male,7,mild,39.5,9,Dengue,"I have sudden high fever, nausea and severe body pain for 6 days."
+53,female,10,severe,102.5,4,Flu,"My fever started suddenly with chills, cough, and weakness for 10 days."
+52,female,10,moderate,40.1,6,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+59,female,4,severe,102.4,10,Dengue,"Experiencing high fever, nausea, and pain all over my body for 4 days."
+54,female,9,moderate,40.0,7,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+63,male,11,severe,100.6,5,Bronchitis,My cough produces a lot of phlegm and I have a mild fever for 11 days.
+33,male,12,moderate,101.4,5,Malaria,"I've been having cyclic fever, sweating, and extreme weakness for 12 days."
+55,male,10,severe,100.1,4,Flu,"I've had fever, sore throat, runny nose, and extreme weakness for 10 days."
+71,female,11,severe,103.7,5,Typhoid,My fever has been continuous with stomach cramps and headache for 11 days.
+64,female,5,mild,40.0,8,Dengue,I have high fever with pain behind the eyes and muscle pain for 4 days.
+19,female,9,severe,101.1,8,Malaria,"I have high fever with chills and shivering, along with headache for 9 days."
+45,male,14,moderate,101.0,8,Malaria,"I've had bouts of fever with sweating, headache, and vomiting for 14 days."
+43,female,13,severe,102.8,8,Malaria,"I have high fever, severe headache, and joint pain for 13 days."
+30,male,8,moderate,101.7,8,Dengue,My eyes hurt badly with high fever and severe muscle aches for 8 days.
+44,male,4,moderate,102.9,6,Flu,"I've had a high temperature with chills, headache, and runny nose for 4 days."
+21,male,15,moderate,101.2,6,Typhoid,I've been feeling very weak with sustained fever and poor appetite for 15 days.
+31,male,7,severe,101.3,6,Bronchitis,I have a continuous cough with yellowish mucus and mild body aches for 7 days.
+24,female,3,moderate,37.5,4,Allergy,I have itching and hives after exposure to dust for 3 days.
+53,female,5,severe,101.9,8,Malaria,"I have a very high temperature, body aches, and vomiting for 5 days."
+29,female,9,moderate,103.2,8,Malaria,I have alternating chills and fever with extreme fatigue for 9 days.
+42,female,23,moderate,103.7,6,Typhoid,"I've had high fever, loss of appetite, and constipation for 23 days."
+40,female,25,moderate,98.7,3,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 25 days."
+76,female,10,severe,103.1,6,Pneumonia,"Experiencing high fever, productive cough, and sweating at night for 10 days."
+31,male,24,moderate,97.7,1,Allergy,"I have a runny nose, sneezing, and itchy skin for the past 24 days."
+62,female,5,moderate,102.6,4,Flu,"I have a high fever, sore throat, and extreme tiredness for 5 days."
+75,female,8,severe,103.1,4,Flu,"I've been sick with high fever, body aches, and headache for 8 days."
+36,male,6,moderate,98.7,2,Allergy,"I have hives on my skin, runny nose, and itchy throat for 6 days."
+26,male,3,severe,104.9,9,Malaria,"Experiencing high fever episodes, severe headache, and body pain for 3 days."
+58,female,14,severe,101.2,7,Malaria,I've been feeling very weak with recurring fever and sweating for 14 days.
+41,female,2,mild,37.6,3,Common Cold,"I have headache, mild body pain and watery eyes for 2 days."
+65,male,5,severe,100.1,6,Flu,"I have a high temperature, dry cough, and can barely get out of bed for 5 days."
+78,female,4,severe,102.4,7,Malaria,"I have high fever with chills and shivering, along with headache for 4 days."
+65,male,8,severe,102.3,9,Dengue,"I've been feeling terrible with high fever, joint pain, and fatigue for 8 days."
+61,female,15,severe,98.6,5,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 15 days.
+50,male,19,mild,101.5,4,Bronchitis,"I've had wheezing, a wet cough, and chest discomfort for about 19 days."
+47,female,5,moderate,39.4,10,Dengue,"I have high fever, severe headache, joint pain and rash for 5 days."
+62,male,10,mild,39.3,7,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+63,female,5,moderate,103.7,10,Dengue,"I've been feeling terrible with high fever, joint pain, and fatigue for 5 days."
+71,female,18,severe,103.8,6,Pneumonia,"Feeling very weak with high fever, chills, and coughing up mucus for 18 days."
+26,female,9,severe,101.8,8,Pneumonia,"I've had shortness of breath, persistent cough, and high fever for 9 days."
+66,male,12,severe,98.9,5,Bronchitis,"I have a deep wet cough, wheezing, and feeling of heaviness in chest for 12 days."
+37,female,17,severe,100.7,4,Bronchitis,My cough produces a lot of phlegm and I have a mild fever for 17 days.
+43,male,14,severe,104.1,8,Malaria,"I have periodic high fever, nausea, and severe body aches for 14 days."
+72,male,5,moderate,102.4,5,Pneumonia,I've been having trouble breathing with chest pain and high fever for 5 days.
+32,male,7,severe,40.4,9,Malaria,I have fever with chills and vomiting for 7 days.
+69,male,7,mild,98.1,2,Common Cold,I have a mild cough with sore throat and head congestion for 7 days.
+19,female,10,severe,100.2,6,Bronchitis,I've been coughing heavily with mucus discharge and chest discomfort for 10 days.
+49,female,18,mild,98.6,3,Allergy,"Experiencing persistent sneezing, congestion, and itchy skin for 18 days."
+80,male,9,severe,103.4,10,Dengue,I've been running a high fever with severe body pain and rash for 9 days.
+60,male,6,mild,98.6,1,Common Cold,I've been sneezing with a runny nose and mild body pain for about 6 days.
+23,male,6,moderate,104.1,10,Dengue,"I have intense joint pain, high fever, and bleeding from gums for 6 days."
+65,female,12,moderate,103.1,7,Typhoid,"I've had sustained fever, diarrhea, and loss of appetite for 12 days."
+43,female,8,moderate,103.0,10,Dengue,I have high fever with bruising easily and extreme tiredness for 8 days.
+73,male,10,moderate,104.1,7,Dengue,"I've had high fever, nosebleeds, and intense headache for 10 days."
+18,male,6,moderate,101.5,9,Dengue,"I have excruciating body pain, high fever, and pain behind eyes for 6 days."
+74,female,4,moderate,101.2,9,Dengue,"I've been having high fever, eye pain, and my muscles are very sore for 4 days."
+41,female,3,mild,100.4,3,Common Cold,"Experiencing watery eyes, constant sneezing, and nasal drip for 3 days."
+75,female,8,moderate,100.1,4,Flu,"I have high fever, dry cough, severe body ache, and extreme fatigue for 8 days."
+31,male,10,severe,101.5,4,Flu,I feel extremely tired with high fever and body pain for the past 10 days.
+78,female,5,moderate,101.6,10,Dengue,"I have high fever with joint pain, muscle pain, and skin rash for 5 days."
+70,male,6,moderate,97.6,3,Allergy,"I've been having nasal irritation, watery eyes, and skin rash for 6 days."
+20,male,15,mild,100.6,6,Bronchitis,"Experiencing a nagging cough, mild fever, and sore chest for 15 days."
+75,male,10,mild,99.6,3,Common Cold,I've been sneezing with a runny nose and mild body pain for about 10 days.
+44,male,5,moderate,102.1,6,Pneumonia,My chest hurts when I cough and I have a high temperature for 5 days.
+19,female,8,severe,102.1,9,Dengue,"I have high fever, loss of appetite, and severe joint pain for 8 days."
+57,male,26,severe,101.2,5,Typhoid,"I've had continuous high fever, loose motions, and loss of energy for 26 days."
+28,female,8,moderate,100.8,5,Flu,"Experiencing sudden fever, muscle soreness, and loss of energy for 8 days."
+57,male,9,severe,100.4,4,Bronchitis,"I have a lingering cough, sore chest, and feel run down for 9 days."
+18,male,8,moderate,100.5,6,Bronchitis,"Experiencing chest discomfort, cough with sputum, and tiredness for 8 days."
+32,male,7,severe,40.2,6,Malaria,"I have high fever with chills and shivering, headache for 6 days."
+30,male,10,mild,37.9,5,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+18,female,12,moderate,103.8,8,Dengue,My eyes hurt badly with high fever and severe muscle aches for 12 days.
+80,female,28,moderate,101.3,7,Typhoid,"I have fever, stomach pain, headache, and feel very weak for 28 days."
+22,female,15,severe,99.9,5,Bronchitis,My cough produces a lot of phlegm and I have a mild fever for 15 days.
+48,female,3,moderate,38.3,3,Common Cold,"I have headache, mild body pain and watery eyes for 2 days."
+36,female,5,severe,40.0,8,Malaria,"I have cyclic fever, sweating and extreme weakness for 5 days."
+36,female,21,severe,100.1,6,Bronchitis,"Experiencing persistent coughing, mucus production, and fatigue for 21 days."
+69,female,6,severe,101.7,6,Malaria,"I have periodic high fever, nausea, and severe body aches for 6 days."
+37,female,10,severe,103.1,8,Malaria,I've been having fever episodes every other day with chills for 10 days.
+70,female,10,severe,100.6,4,Bronchitis,My cough has been getting worse with wheezing and mild fever for 10 days.
+18,female,5,moderate,40.9,9,Malaria,I have fever with chills and vomiting for 7 days.
+41,female,16,moderate,103.7,8,Typhoid,I have a step-ladder fever pattern with weakness and stomach pain for 16 days.
+25,male,7,mild,39.8,7,Malaria,"I have cyclic fever, sweating and extreme weakness for 5 days."
+26,male,19,moderate,101.3,6,Bronchitis,"I have a low-grade fever, persistent cough, and wheezing for 19 days."
+51,male,15,moderate,101.9,4,Typhoid,"I have prolonged fever, headache, and abdominal cramps for 15 days."
+28,male,25,moderate,103.7,4,Typhoid,My fever has been continuous with stomach cramps and headache for 25 days.
+48,female,25,severe,103.1,6,Typhoid,"I have fever, stomach pain, headache, and feel very weak for 25 days."
+56,female,4,moderate,103.2,6,Dengue,"Experiencing extreme fatigue, high fever, and aching joints for 4 days."
+67,male,12,moderate,101.4,7,Dengue,"I've had high fever, pain behind eyes, and petechial rash for 12 days."
+28,female,14,moderate,103.8,6,Dengue,"I have fever, retro-orbital pain, and my joints are very painful for 14 days."
+27,female,6,mild,38.6,6,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+34,male,8,mild,38.8,7,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+48,male,18,moderate,99.5,3,Bronchitis,"I have a lingering cough, sore chest, and feel run down for 18 days."
+31,female,4,moderate,103.0,7,Malaria,I have fever that spikes suddenly with chills and nausea for 4 days.
+22,male,7,severe,38.6,4,Bronchitis,I have cough with mucus and shortness of breath for 9 days.
+58,female,6,mild,38.6,8,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+41,female,20,severe,103.2,7,Pneumonia,"I've had a wet cough, high fever, and feel extremely fatigued for 20 days."
+61,male,8,mild,98.9,4,Common Cold,"I've had a mild fever, runny nose, and feel fatigued for the last 8 days."
+68,female,14,moderate,102.8,9,Malaria,I have alternating chills and fever with extreme fatigue for 14 days.
+37,male,13,moderate,98.6,1,Allergy,"I have nasal congestion, watery eyes, and mild cough for 13 days."
+23,male,11,moderate,103.1,6,Dengue,"I have high fever with joint pain, muscle pain, and skin rash for 11 days."
+69,female,6,moderate,101.7,7,Flu,"I have severe body aches, fever, and feel completely drained for 6 days."
+35,male,5,mild,39.2,8,Dengue,I have high fever with pain behind the eyes and muscle pain for 4 days.
+58,female,18,moderate,100.3,4,Bronchitis,I've been coughing with thick mucus and feel short of breath for 18 days.
+53,male,9,mild,99.1,4,Common Cold,"I have congestion, post-nasal drip, and sneezing since 9 days."
+26,female,6,moderate,104.3,9,Malaria,I have fever with chills and vomiting for 6 days.
+29,female,19,mild,98.5,3,Bronchitis,I've been coughing heavily with mucus discharge and chest discomfort for 19 days.
+76,male,1,mild,97.6,2,Allergy,"I have swollen nasal passages, watery eyes, and skin rash for 1 days."
+33,male,17,moderate,99.1,2,Allergy,My nose has been running with sneezing and skin hives for 17 days.
+72,female,5,severe,102.8,6,Flu,"Experiencing chills, headache, muscle pain, and loss of appetite for 5 days."
+64,female,8,moderate,99.7,3,Common Cold,I feel congested with a slight sore throat and watery eyes for 8 days.
+57,female,9,severe,99.5,6,Bronchitis,"I have a chronic cough with clear sputum, wheezing, and tiredness for 9 days."
+56,female,19,severe,102.4,8,Typhoid,"Experiencing high fever, constipation, and extreme fatigue for 19 days."
+73,female,24,mild,98.0,1,Allergy,My nose has been running with sneezing and skin hives for 24 days.
+57,female,25,severe,102.2,5,Typhoid,"I've had continuous high fever, loose motions, and loss of energy for 25 days."
+62,female,7,severe,102.3,5,Flu,"Experiencing fever, dry cough, sore throat, and body aches for 7 days."
+36,female,8,severe,99.8,4,Bronchitis,"I have chest tightness, productive cough, and wheezing for the past 8 days."
+31,female,23,severe,101.9,6,Typhoid,"Experiencing prolonged high fever, abdominal discomfort, and fatigue for 23 days."
+80,female,3,moderate,102.5,6,Flu,"Experiencing chills, headache, muscle pain, and loss of appetite for 3 days."
+62,female,14,severe,103.5,5,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 14 days."
+60,male,4,moderate,102.6,7,Malaria,"I feel extremely weak with high fever, headache, and body pain for 4 days."
+19,female,12,mild,101.0,5,Bronchitis,I've been wheezing with a persistent cough and feel exhausted for 12 days.
+25,female,4,moderate,38.1,5,Common Cold,"I have headache, mild body pain and watery eyes for 2 days."
+78,female,11,moderate,101.3,5,Pneumonia,I have a deep chest cough with yellow-green sputum and high fever for 11 days.
+26,male,5,moderate,100.2,6,Flu,"I've been shivering with fever, headache, and severe body aches for 5 days."
+54,male,9,mild,100.4,2,Common Cold,"I've had a mild cough, congestion, and watery eyes for 9 days now."
+43,male,5,moderate,98.7,4,Common Cold,"I've had a mild cough, congestion, and watery eyes for 5 days now."
+57,male,21,severe,102.8,8,Typhoid,My fever has been unremitting with stomach pain and weakness for 21 days.
+55,male,5,mild,39.1,7,Dengue,"I have high fever, severe headache, joint pain and rash for 5 days."
+35,male,16,mild,100.5,6,Bronchitis,"Experiencing mucus-producing cough, chest tightness, and fatigue for 16 days."
+62,female,6,severe,100.5,7,Flu,"I have aching joints, high fever, and a dry cough that won't stop for 6 days."
+24,male,7,moderate,97.9,3,Allergy,"Experiencing skin rash, nasal congestion, and watery eyes for 7 days."
+22,male,17,moderate,100.3,3,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 17 days.
+63,female,8,mild,101.2,6,Bronchitis,"I have chest congestion, a productive cough, and fatigue for 8 days."
+52,male,10,severe,104.3,6,Dengue,"I have high fever, loss of appetite, and severe joint pain for 10 days."
+30,female,23,mild,97.8,3,Allergy,"I've been having nasal irritation, watery eyes, and skin rash for 23 days."
+40,female,4,moderate,98.2,3,Common Cold,"I have a mild cough, runny nose, and feel tired for the past 4 days."
+77,male,13,moderate,103.8,10,Dengue,"I've been having high fever, rash, and severe headache for the past 13 days."
+48,male,9,mild,38.0,4,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+49,female,4,severe,101.6,7,Dengue,"I have high fever, eye pain, and red spots on my skin for 4 days."
+55,male,10,severe,37.6,7,Bronchitis,"I have dry cough, wheezing and fatigue for 8 days."
+54,male,7,moderate,103.6,6,Dengue,"I have intense joint pain, high fever, and bleeding from gums for 7 days."
+49,female,18,moderate,103.6,6,Pneumonia,"Feeling very weak with high fever, chills, and coughing up mucus for 18 days."
+68,male,4,mild,99.4,3,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 4 days."
+65,male,20,severe,98.7,6,Bronchitis,I have a persistent cough with mucus production and chest discomfort for 20 days.
+62,female,7,mild,98.5,2,Common Cold,I've been feeling congested with sneezing and a slight fever for 7 days.
+57,male,2,mild,38.4,4,Common Cold,"I have mild fever, runny nose, sneezing and sore throat for 3 days."
+40,male,3,severe,102.8,6,Flu,"I've been having body aches, dry cough, and high fever for 3 days."
+37,female,6,moderate,103.2,9,Malaria,I've been vomiting with high fever and severe body aches for 6 days.
+58,male,7,moderate,99.1,3,Common Cold,I have sneezing episodes with a runny nose and mild body aches for 7 days.
+47,female,9,severe,102.6,5,Pneumonia,"I have shaking chills, high fever, and a painful cough for 9 days."
+31,female,19,moderate,103.7,7,Pneumonia,"I have chest pain when I breathe, along with fever and fatigue for 19 days."
+54,male,4,severe,101.7,7,Malaria,I have high fever alternating with chills and extreme tiredness for 4 days.
+60,male,5,moderate,38.2,6,Common Cold,"I have cough, congestion and fatigue for 4 days."
+54,female,8,moderate,101.7,6,Typhoid,"I've been sick with continuous fever, headache, and abdominal pain for 8 days."
+56,female,11,severe,103.3,7,Malaria,"I've had relapsing fever, shivering, and can barely eat for 11 days."
+41,female,15,moderate,97.8,1,Allergy,"I've been dealing with hives, sneezing, and runny nose for 15 days."
+40,female,11,severe,101.9,6,Dengue,"I have high fever, extreme weakness, and pain behind both eyes for 11 days."
+63,male,8,mild,99.7,3,Common Cold,"Experiencing watery eyes, constant sneezing, and nasal drip for 8 days."
+42,male,11,moderate,40.0,6,Typhoid,"I have sustained high fever, stomach pain, headache and weakness for 8 days."
+54,male,13,moderate,101.9,9,Malaria,"I have a very high temperature, body aches, and vomiting for 13 days."
+46,female,4,moderate,103.4,4,Flu,"I've had sudden chills, high fever, and intense body pain for 4 days."
+47,female,4,moderate,37.6,6,Common Cold,"I have cough, congestion and fatigue for 4 days."
+61,female,19,moderate,99.3,1,Allergy,"I've had sneezing episodes, nasal congestion, and eye irritation for 19 days."
+51,male,26,severe,102.6,4,Typhoid,"Experiencing high fever, constipation, and extreme fatigue for 26 days."
+57,male,19,mild,99.4,6,Bronchitis,"Experiencing chest discomfort, cough with sputum, and tiredness for 19 days."
+48,male,8,severe,103.7,5,Pneumonia,I'm coughing constantly with thick mucus and have a high fever for 8 days.
+29,female,6,mild,40.0,7,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+66,male,11,moderate,99.6,3,Bronchitis,"Experiencing a nagging cough, mild fever, and sore chest for 11 days."
+23,female,9,mild,100.2,2,Common Cold,I've been sneezing a lot with nasal congestion and mild headache for 9 days.
+66,male,8,moderate,101.6,7,Typhoid,"I've had prolonged fever, abdominal discomfort, and constipation for 8 days."
+80,male,1,moderate,98.0,3,Allergy,"I have an itchy throat, runny nose, and swollen eyes for 1 days."
+29,male,6,severe,102.3,4,Flu,"I've had a high fever with body aches, headache, and sore throat for 6 days."
+30,male,18,severe,102.4,6,Pneumonia,"Experiencing rapid breathing, chest pain, and persistent fever for 18 days."
+33,male,10,severe,102.8,9,Malaria,I have fever with chills and vomiting for 10 days.
+56,male,10,severe,102.9,5,Flu,"Experiencing sudden fever, muscle soreness, and loss of energy for 10 days."
+22,female,12,moderate,102.0,7,Pneumonia,"Experiencing severe fatigue, high fever, and coughing with phlegm for 12 days."
+63,male,17,moderate,99.8,5,Bronchitis,"Experiencing a barking cough, mucus, and tightness in my chest for 17 days."
+50,male,25,severe,103.9,4,Typhoid,"I have sustained fever, weakness, and diarrhea for 25 days."
+45,male,10,moderate,99.2,1,Common Cold,"I've been dealing with sneezing fits, runny nose, and a headache for 10 days."
+42,male,4,moderate,100.1,3,Common Cold,"I have nasal congestion, mild headache, and fatigue for 4 days."
+62,female,9,moderate,98.6,1,Allergy,"I've had allergic reactions with sneezing, itching, and congestion for 9 days."
+19,male,7,moderate,40.5,9,Malaria,"I have cyclic fever, sweating and extreme weakness for 5 days."
+52,female,13,moderate,98.8,5,Bronchitis,I have a deep cough producing clear mucus with mild chest pain for 13 days.
+72,male,8,severe,102.2,4,Typhoid,My fever has been continuous with stomach cramps and headache for 8 days.
+63,female,6,moderate,100.5,3,Common Cold,"Experiencing watery eyes, constant sneezing, and nasal drip for 6 days."
+47,male,8,moderate,102.2,5,Malaria,I have fever that spikes suddenly with chills and nausea for 8 days.
+20,male,9,mild,98.6,5,Bronchitis,"Experiencing a barking cough, mucus, and tightness in my chest for 9 days."
+50,male,10,moderate,104.3,9,Dengue,"I have high fever with joint pain, muscle pain, and skin rash for 10 days."
+64,male,14,severe,100.8,5,Pneumonia,"Experiencing high fever, productive cough, and sweating at night for 14 days."
+64,female,2,mild,38.3,3,Common Cold,"I have mild fever, runny nose, sneezing and sore throat for 3 days."
+40,male,18,moderate,97.7,3,Allergy,"I've had allergic reactions with sneezing, itching, and congestion for 18 days."
+62,female,18,mild,98.1,2,Allergy,"I have sneezing, itchy eyes, runny nose, and skin rash for 18 days."
+46,female,16,moderate,98.2,3,Allergy,"Experiencing skin rash, nasal congestion, and watery eyes for 16 days."
+70,female,21,mild,99.4,5,Bronchitis,"I have a chronic cough with clear sputum, wheezing, and tiredness for 21 days."
+28,female,13,moderate,103.6,7,Malaria,"Experiencing high fever, cold sweats, and severe joint pain for 13 days."
+23,female,11,moderate,102.3,9,Dengue,I've had high fever with a rash on my torso and severe headache for 11 days.
+41,female,6,mild,40.9,6,Malaria,"I have high fever with chills and shivering, headache for 6 days."
+42,male,9,moderate,98.1,4,Common Cold,I feel congested with a slight sore throat and watery eyes for 9 days.
+72,female,17,moderate,101.6,7,Pneumonia,I'm coughing constantly with thick mucus and have a high fever for 17 days.
+56,male,26,mild,98.6,1,Allergy,"Experiencing itchy eyes, blocked nose, and throat irritation for 26 days."
+22,male,7,severe,103.3,7,Flu,"I've been shivering with fever, headache, and severe body aches for 7 days."
+74,male,10,moderate,101.5,5,Flu,"Experiencing high fever, aching body, sore throat, and fatigue for 10 days."
+18,male,20,moderate,99.4,1,Allergy,I've had itching and hives after exposure to dust for 20 days.
+65,female,3,mild,98.1,4,Common Cold,"Experiencing congestion, watery eyes, and a scratchy throat for 3 days."
+46,male,11,severe,101.7,7,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 11 days."
+59,female,10,moderate,103.5,10,Dengue,"I have high fever, extreme weakness, and pain behind both eyes for 10 days."
+27,male,7,severe,101.1,10,Dengue,"Experiencing high fever, nausea, and pain all over my body for 7 days."
+59,male,4,severe,103.0,5,Flu,"I have a high temperature, dry cough, and can barely get out of bed for 4 days."
+41,male,6,severe,40.3,7,Malaria,I have fever with chills and vomiting for 7 days.
+73,male,4,moderate,98.7,3,Common Cold,I have a mild cough with sore throat and head congestion for 4 days.
+59,female,14,moderate,102.8,8,Pneumonia,"I have shaking chills, high fever, and a painful cough for 14 days."
+32,female,20,severe,102.1,4,Pneumonia,My chest hurts when I cough and I have a high temperature for 20 days.
+65,female,8,severe,102.8,6,Flu,"I have aching joints, high fever, and a dry cough that won't stop for 8 days."
+49,male,17,moderate,102.7,6,Typhoid,"I have prolonged fever, headache, and abdominal cramps for 17 days."
+63,male,9,mild,99.0,3,Common Cold,"I have congestion, mild body aches, and a sore throat for the past 9 days."
+39,female,9,moderate,38.2,7,Bronchitis,"I have persistent cough, chest discomfort and mild fever for 10 days."
+37,male,8,moderate,101.2,10,Dengue,My fever is very high with extreme body aches and eye pain for 8 days.
+39,male,11,moderate,102.2,8,Dengue,I've had sudden onset of high fever with severe muscle pain for 11 days.
+46,female,8,mild,99.3,2,Common Cold,"Experiencing throat discomfort, congestion, and frequent sneezing for 8 days."
+20,male,20,severe,103.9,4,Pneumonia,"My chest feels heavy, I have a high fever, and I'm very weak for 20 days."
+56,male,5,severe,103.3,5,Flu,"I've had a high temperature with chills, headache, and runny nose for 5 days."
+42,female,3,severe,103.4,4,Flu,"Experiencing fever, dry cough, sore throat, and body aches for 3 days."
+50,female,3,severe,100.2,5,Flu,"I have extreme tiredness, high fever, and muscle pain for 3 days."
+62,male,4,moderate,100.4,7,Flu,"I have chills, aching muscles, and a persistent dry cough for 4 days."
+52,male,19,moderate,102.7,5,Typhoid,My fever has been unremitting with stomach pain and weakness for 19 days.
+29,female,7,severe,103.5,7,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 7 days."
+40,male,21,moderate,102.5,4,Typhoid,"Experiencing continuous fever, stomach discomfort, and fatigue for 21 days."
+33,male,12,moderate,39.9,6,Typhoid,"I have sustained high fever, stomach pain, headache and weakness for 8 days."
+32,male,15,moderate,101.2,7,Typhoid,I have high fever with coated tongue and abdominal tenderness for 15 days.
+31,female,8,mild,98.7,2,Common Cold,I've been sneezing with a runny nose and mild body pain for about 8 days.
+22,male,9,moderate,98.1,2,Allergy,"I've had nasal drip, sneezing, and skin irritation for 9 days."
+70,male,8,mild,98.1,2,Common Cold,"I've had a mild cough, congestion, and watery eyes for 8 days now."
+50,male,5,severe,36.8,4,Allergy,"I have nasal congestion, watery eyes and mild cough for 8 days."
+38,male,5,severe,101.5,8,Malaria,"I feel extremely weak with high fever, headache, and body pain for 5 days."
+30,female,5,moderate,40.0,9,Flu,"I have chills, headache, muscle pain and loss of appetite for 6 days."
+70,female,17,moderate,102.1,7,Typhoid,"Experiencing prolonged high fever, abdominal discomfort, and fatigue for 17 days."
+71,male,26,moderate,102.2,6,Typhoid,"I've been having persistent fever, loss of appetite, and abdominal pain for 26 days."
+50,female,8,severe,103.4,9,Malaria,"My fever comes and goes with chills, headache, and fatigue for 8 days."
+37,male,10,moderate,102.2,4,Typhoid,"I have sustained high fever, stomach pain, headache, and weakness for 10 days."
+32,female,10,severe,102.7,9,Malaria,"Experiencing high fever episodes, severe headache, and body pain for 10 days."
+59,male,14,moderate,104.0,7,Pneumonia,"I've had stabbing chest pain, productive cough, and high fever for 14 days."
+22,female,10,moderate,103.3,4,Flu,"I've been sick with high fever, body aches, and headache for 10 days."
+27,male,11,moderate,99.4,3,Allergy,"I have itchy, red eyes, frequent sneezing, and nasal drip for 11 days."
+62,female,14,moderate,102.9,6,Pneumonia,I have a persistent cough with blood-tinged phlegm and fever for 14 days.
+59,male,10,mild,40.2,6,Pneumonia,"I have fever, chills, cough with phlegm and difficulty breathing for 5 days."
+52,female,16,severe,103.3,6,Typhoid,"I have high fever, weakness, stomach cramps, and no desire to eat for 16 days."
+46,female,8,severe,101.3,9,Malaria,Experiencing periodic fever with intense sweating and muscle aches for 8 days.
+31,male,23,severe,102.4,8,Typhoid,"I have sustained fever, weakness, and diarrhea for 23 days."
+26,male,10,moderate,99.0,6,Bronchitis,I've been coughing with thick mucus and feel short of breath for 10 days.
+65,female,6,severe,100.6,5,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 6 days."
+52,male,7,severe,39.0,4,Bronchitis,I have cough with mucus and shortness of breath for 9 days.
+72,male,22,severe,103.7,8,Typhoid,"I have prolonged fever, headache, and abdominal cramps for 22 days."
+40,female,21,mild,99.3,5,Bronchitis,I've been wheezing with a persistent cough and feel exhausted for 21 days.
+70,female,11,severe,104.2,5,Malaria,My fever keeps coming back with profuse sweating and body pain for 11 days.
+68,female,17,severe,102.4,7,Typhoid,"I've had sustained fever, diarrhea, and loss of appetite for 17 days."
+30,male,10,moderate,98.1,2,Allergy,"I've been having nasal irritation, watery eyes, and skin rash for 10 days."
+80,male,9,severe,101.4,6,Flu,"I have severe body aches, fever, and feel completely drained for 9 days."
+28,male,10,mild,98.0,3,Allergy,"I have congestion, itchy eyes, and a scratchy throat for 10 days."
+64,male,8,moderate,100.3,1,Common Cold,"I have a head cold with sneezing, congestion, and watery eyes for 8 days."
+30,female,18,mild,98.7,2,Allergy,"Experiencing nasal drip, sneezing, and puffy eyes for 18 days."
+53,female,26,moderate,98.8,3,Allergy,"I have an itchy throat, runny nose, and swollen eyes for 26 days."
+71,male,4,severe,102.2,8,Malaria,I've been shivering with high fever and profuse sweating for 4 days.
+68,female,13,severe,102.9,5,Typhoid,My fever has been unremitting with stomach pain and weakness for 13 days.
+32,female,13,mild,98.3,1,Allergy,"Experiencing nasal drip, sneezing, and puffy eyes for 13 days."
+71,female,4,moderate,101.3,7,Dengue,I've been running a high fever with severe body pain and rash for 4 days.
+53,male,14,severe,102.3,6,Typhoid,My fever won't go down and I have stomach pain with headache for 14 days.
+36,male,5,moderate,98.5,3,Common Cold,"Feeling tired with a stuffy nose, sore throat, and mild headache for 5 days."
+28,male,22,moderate,101.1,4,Typhoid,"I have sustained fever, weakness, and diarrhea for 22 days."
+18,female,5,moderate,100.3,4,Common Cold,"I'm experiencing sore throat, nasal drip, and fatigue for 5 days."
+33,female,6,moderate,99.4,2,Allergy,"I've had allergic reactions with sneezing, itching, and congestion for 6 days."
+49,male,7,moderate,102.8,6,Typhoid,"Experiencing sustained fever, diarrhea, and severe fatigue for 7 days."
+31,male,4,moderate,100.6,4,Flu,"I have a sudden high fever, body aches, and I can't eat anything for 4 days."
+32,male,4,moderate,37.2,5,Allergy,"I have nasal congestion, watery eyes and mild cough for 8 days."
+25,male,11,moderate,103.7,5,Pneumonia,"I have a high fever that won't break, chest pain, and shortness of breath for 11 days."
+63,male,8,severe,101.8,4,Flu,"I have high fever, dry cough, severe body ache, and extreme fatigue for 8 days."
+23,male,2,severe,38.2,5,Common Cold,"I have cough, congestion and fatigue for 4 days."
+70,female,9,severe,99.5,6,Bronchitis,"I have a chronic cough with clear sputum, wheezing, and tiredness for 9 days."
+64,female,12,severe,99.3,4,Bronchitis,I've had a rattling cough with mucus and chest soreness for about 12 days.
+60,male,6,severe,101.4,7,Flu,"Experiencing chills, headache, muscle pain, and loss of appetite for 6 days."
+49,male,10,severe,103.4,7,Dengue,"I've been having high fever, eye pain, and my muscles are very sore for 10 days."
+33,male,2,mild,97.7,2,Allergy,I have a runny nose with itchy throat and mild skin rash for 2 days.
+44,female,3,severe,100.4,6,Flu,"I've had a high fever with body aches, headache, and sore throat for 3 days."
+27,male,12,moderate,38.6,7,Bronchitis,"I have persistent cough, chest discomfort and mild fever for 10 days."
+45,male,4,severe,37.8,4,Common Cold,"I have headache, mild body pain and watery eyes for 2 days."
+49,female,5,mild,100.2,1,Common Cold,My nose is stuffy and I have a mild sore throat with tiredness for 5 days.
+52,female,21,severe,100.8,5,Bronchitis,"Experiencing persistent coughing, mucus production, and fatigue for 21 days."
+54,female,19,moderate,103.1,6,Typhoid,"I've had high fever, loss of appetite, and constipation for 19 days."
+33,female,7,moderate,98.8,4,Common Cold,"I have a mild cold with runny nose, headache, and fatigue lasting 7 days."
+55,female,8,severe,103.0,7,Flu,I've been having chills and fever with severe headache and cough for 8 days.
+38,male,21,mild,99.1,3,Allergy,"My allergies are acting up with sneezing, congestion, and hives for 21 days."
+32,female,10,severe,100.5,4,Flu,"I've been having body aches, dry cough, and high fever for 10 days."
+52,male,6,mild,40.9,6,Malaria,I have fever with chills and vomiting for 7 days.
+43,male,9,mild,97.6,2,Allergy,"I have nasal congestion, watery eyes, and mild cough for 9 days."
+38,male,8,mild,39.7,8,Malaria,"I have cyclic fever, sweating and extreme weakness for 5 days."
+23,male,10,moderate,102.1,9,Malaria,"I feel extremely weak with high fever, headache, and body pain for 10 days."
+51,male,7,moderate,103.8,10,Dengue,I've had sudden onset of high fever with severe muscle pain for 7 days.
+41,female,14,moderate,101.4,7,Pneumonia,"Experiencing severe fatigue, high fever, and coughing with phlegm for 14 days."
+18,female,15,severe,101.1,7,Pneumonia,"I have difficulty breathing, sharp chest pain, and a productive cough for 15 days."
+43,male,5,severe,100.5,4,Flu,"I have extreme tiredness, high fever, and muscle pain for 5 days."
+31,male,8,severe,102.7,6,Dengue,"I've been having high fever, rash, and severe headache for the past 8 days."
+69,female,5,moderate,102.9,9,Dengue,"I've had high fever, pain behind eyes, and petechial rash for 5 days."
+52,male,10,moderate,102.6,6,Flu,"I've been shivering with fever, headache, and severe body aches for 10 days."
+21,female,13,moderate,101.2,6,Typhoid,"I have high fever, weakness, stomach cramps, and no desire to eat for 13 days."
+64,male,6,moderate,103.7,6,Pneumonia,I can barely breathe and have a high fever with chest tightness for 6 days.
+52,female,10,moderate,103.9,10,Dengue,"I've had high fever, pain behind eyes, and petechial rash for 10 days."
+47,female,17,moderate,101.8,6,Pneumonia,"I've been coughing up thick mucus, have chest pain, and a high fever for 17 days."
+59,male,21,severe,100.7,3,Bronchitis,"I have wheezing, a persistent cough, and mild fever for 21 days."
+21,male,10,mild,100.3,2,Common Cold,My nose has been running constantly with sneezing and a mild cough for 10 days.
+34,male,16,moderate,98.8,1,Allergy,"I've been sneezing constantly with itchy, watery eyes for 16 days."
+21,female,4,moderate,102.0,9,Dengue,"I have very high fever, rash, and pain in all my joints for 4 days."
+52,female,13,severe,103.2,5,Typhoid,I've been feeling very weak with sustained fever and poor appetite for 13 days.
+41,female,12,moderate,102.4,10,Dengue,"I have high fever, severe headache, and pain behind my eyes for 12 days."
+27,male,13,moderate,103.6,5,Typhoid,"I have persistent high temperature, headache, and diarrhea for 13 days."
+49,male,7,moderate,101.7,7,Malaria,I've been experiencing chills followed by fever and severe weakness for 7 days.
+45,female,9,moderate,100.2,1,Common Cold,Sneezing constantly with a blocked nose and slight headache for the past 9 days.
+33,female,5,moderate,98.5,1,Common Cold,"I've had nasal congestion, a mild cough, and feel run down for 5 days."
+41,female,8,moderate,103.3,7,Flu,"My fever started suddenly with chills, cough, and weakness for 8 days."
+48,male,9,moderate,103.4,6,Typhoid,"Experiencing sustained fever, diarrhea, and severe fatigue for 9 days."
+49,female,6,severe,102.2,6,Flu,"I have a high fever, aching muscles, and a very sore throat for 6 days."
+48,male,3,moderate,103.0,7,Flu,"I've been having body aches, dry cough, and high fever for 3 days."
+38,female,21,severe,99.7,6,Bronchitis,"Experiencing a nagging cough, mild fever, and sore chest for 21 days."
+76,male,10,moderate,104.4,5,Malaria,I've been feeling very weak with recurring fever and sweating for 10 days.
+36,male,9,moderate,102.8,8,Pneumonia,"I've had shortness of breath, persistent cough, and high fever for 9 days."
+69,female,10,moderate,100.4,4,Common Cold,"I've been dealing with sneezing fits, runny nose, and a headache for 10 days."
+39,female,5,mild,98.5,3,Common Cold,I've been feeling congested with sneezing and a slight fever for 5 days.
+67,male,20,moderate,98.9,3,Allergy,I have a runny nose with itchy throat and mild skin rash for 20 days.
+40,female,7,moderate,103.5,6,Dengue,I have severe joint and muscle pain with high fever for 7 days.
+25,male,10,mild,98.2,1,Common Cold,"I have a mild cold with runny nose, headache, and fatigue lasting 10 days."
+21,male,24,moderate,102.6,4,Typhoid,"I've had continuous high fever, loose motions, and loss of energy for 24 days."
+66,female,9,moderate,100.1,4,Common Cold,"Feeling tired with a stuffy nose, sore throat, and mild headache for 9 days."
+64,female,10,moderate,104.1,9,Dengue,"I've had high fever, nosebleeds, and intense headache for 10 days."
+26,male,8,severe,103.3,5,Pneumonia,I've been coughing up phlegm with chest tightness and difficulty breathing for 8 days.
+40,female,12,moderate,103.2,8,Pneumonia,"Feeling very weak with high fever, chills, and coughing up mucus for 12 days."
+44,male,13,moderate,100.0,6,Bronchitis,"I have a low-grade fever, persistent cough, and wheezing for 13 days."
+32,female,6,moderate,100.0,1,Common Cold,My nose is stuffy and I have a mild sore throat with tiredness for 6 days.
+47,female,10,mild,99.8,4,Common Cold,I've had a sore throat and runny nose with occasional sneezing for 10 days.
+22,male,9,mild,99.7,3,Common Cold,"Experiencing watery eyes, constant sneezing, and nasal drip for 9 days."
+25,male,5,severe,103.1,6,Malaria,I've been having fever episodes every other day with chills for 5 days.
+60,male,17,severe,103.9,5,Pneumonia,"I have shaking chills, high fever, and a painful cough for 17 days."
+44,male,21,mild,101.5,6,Bronchitis,I have a deep cough producing clear mucus with mild chest pain for 21 days.
+51,male,17,moderate,103.1,4,Typhoid,I have high fever with coated tongue and abdominal tenderness for 17 days.
+73,male,9,severe,100.8,7,Flu,"I have extreme tiredness, high fever, and muscle pain for 9 days."
+32,male,14,severe,101.3,7,Typhoid,"I have continuous high fever, loose stools, and body weakness for 14 days."
+32,male,15,mild,97.5,1,Allergy,"I have sneezing, itchy eyes, runny nose, and skin rash for 15 days."
+73,female,26,moderate,102.2,4,Typhoid,My fever has been continuous with stomach cramps and headache for 26 days.
+28,female,5,moderate,98.7,2,Common Cold,My throat feels raw and I have a blocked nose with sneezing for 5 days.
+66,female,10,moderate,102.8,7,Dengue,"I have high fever, extreme weakness, and pain behind both eyes for 10 days."
+51,female,17,moderate,101.4,6,Bronchitis,"I have difficulty breathing, persistent cough, and mild temperature for 17 days."
+54,male,15,moderate,97.9,3,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 15 days."
+34,female,19,moderate,98.7,3,Allergy,"I've had allergic reactions with sneezing, itching, and congestion for 19 days."
+75,male,6,moderate,100.6,6,Flu,"I have severe body aches, fever, and feel completely drained for 6 days."
+80,male,14,severe,102.8,4,Typhoid,"I've been having sustained fever, poor appetite, and constipation for 14 days."
+43,female,4,mild,99.4,1,Common Cold,I've had a sore throat and runny nose with occasional sneezing for 4 days.
+58,male,12,moderate,101.8,9,Dengue,"I've been having high fever, eye pain, and my muscles are very sore for 12 days."
+45,female,21,moderate,103.4,5,Typhoid,"I've had high fever, loss of appetite, and constipation for 21 days."
+42,female,7,severe,102.1,4,Flu,"I have a high temperature, dry cough, and can barely get out of bed for 7 days."
+49,male,6,moderate,99.1,2,Allergy,"I have blocked nose, watery eyes, and itching all over for 6 days."
+25,female,10,severe,101.3,7,Typhoid,"I have fever, stomach pain, headache, and feel very weak for 10 days."
+79,female,12,moderate,102.7,6,Dengue,I have high fever with bruising easily and extreme tiredness for 12 days.
+67,male,13,moderate,98.2,2,Allergy,"I have a runny nose, sneezing, and itchy skin for the past 13 days."
+73,female,10,moderate,100.8,7,Flu,"Experiencing high fever, aching body, sore throat, and fatigue for 10 days."
+79,male,15,mild,100.3,3,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 15 days.
+61,female,9,severe,102.7,4,Typhoid,"Experiencing prolonged high fever, abdominal discomfort, and fatigue for 9 days."
+55,female,6,severe,101.0,6,Malaria,My body aches terribly with high fever and cold sweats for 6 days.
+61,female,19,severe,103.4,6,Pneumonia,I can barely breathe and have a high fever with chest tightness for 19 days.
+24,female,25,mild,97.7,2,Allergy,"I have a runny nose, sneezing, and itchy skin for the past 25 days."
+77,male,7,moderate,104.2,8,Malaria,"Experiencing fever spikes with chills, joint pain, and loss of appetite for 7 days."
+26,female,9,moderate,102.0,6,Malaria,"Experiencing high fever episodes, severe headache, and body pain for 9 days."
+50,female,6,moderate,39.9,9,Flu,I have high fever with body pain and weakness for 4 days.
+33,female,10,severe,100.2,5,Flu,"I have a high fever, aching muscles, and a very sore throat for 10 days."
+39,female,16,moderate,103.5,6,Pneumonia,"I've been coughing up thick mucus, have chest pain, and a high fever for 16 days."
+18,female,5,mild,97.9,2,Allergy,"I've been dealing with hives, sneezing, and runny nose for 5 days."
+70,female,6,severe,101.0,7,Dengue,"Experiencing high fever, bleeding gums, and extreme body aches for 6 days."
+67,male,9,moderate,102.3,4,Flu,I've been having chills and fever with severe headache and cough for 9 days.
+51,male,20,moderate,99.0,5,Bronchitis,I've been coughing with thick mucus and feel short of breath for 20 days.
+22,male,11,moderate,103.5,7,Typhoid,"I have sustained high fever, stomach pain, headache, and weakness for 11 days."
+41,male,10,mild,99.4,1,Allergy,"Experiencing persistent sneezing, congestion, and itchy skin for 10 days."
+36,female,18,moderate,102.1,6,Pneumonia,"I feel extremely ill with chest pain, coughing, and a high temperature for 18 days."
+50,female,4,moderate,99.4,3,Allergy,I've had itching and hives after exposure to dust for 4 days.
+36,male,8,moderate,101.9,5,Flu,"I have severe body aches, fever, and feel completely drained for 8 days."
+80,male,8,moderate,100.6,7,Pneumonia,I have a deep chest cough with yellow-green sputum and high fever for 8 days.
+55,male,8,moderate,102.8,8,Dengue,"I've been having high fever, eye pain, and my muscles are very sore for 8 days."
+33,male,8,severe,101.2,4,Bronchitis,"Experiencing a barking cough, mucus, and tightness in my chest for 8 days."
+32,male,24,severe,104.1,5,Typhoid,"I have high fever, weakness, stomach cramps, and no desire to eat for 24 days."
+30,female,3,moderate,103.4,6,Flu,"I have a high fever, sore throat, and extreme tiredness for 3 days."
+22,male,7,severe,99.6,6,Bronchitis,"Experiencing chest discomfort, cough with sputum, and tiredness for 7 days."
+24,male,17,severe,102.5,8,Pneumonia,"I have chills, cough with phlegm, and it hurts to take deep breaths for 17 days."
+64,male,6,moderate,103.1,4,Flu,I've been having chills and fever with severe headache and cough for 6 days.
+30,male,5,severe,102.1,6,Dengue,Experiencing sudden high fever with severe body and joint pain for 5 days.
+35,female,4,moderate,103.2,9,Dengue,"Experiencing extreme fatigue, high fever, and aching joints for 4 days."
+46,male,21,moderate,103.0,8,Pneumonia,"Feeling very weak with high fever, chills, and coughing up mucus for 21 days."
+71,male,9,mild,98.7,5,Bronchitis,"Experiencing persistent coughing, mucus production, and fatigue for 9 days."
+77,female,20,mild,100.8,6,Bronchitis,"I've been dealing with chest tightness, cough, and wheezing for 20 days."
+44,female,10,severe,101.5,5,Pneumonia,"I have severe cough, chest pain, and high fever for 10 days."
+19,female,10,moderate,102.1,5,Typhoid,"I've been sick with continuous fever, headache, and abdominal pain for 10 days."
+59,female,11,moderate,98.7,2,Allergy,"I have congestion, itchy eyes, and a scratchy throat for 11 days."
+62,male,3,moderate,103.0,8,Malaria,"I have high fever with chills and shivering, along with headache for 3 days."
+20,female,8,mild,98.6,4,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 8 days.
+37,male,8,moderate,101.1,7,Malaria,I've had recurring fever episodes with intense sweating and fatigue for 8 days.
+29,male,13,moderate,103.9,7,Dengue,"Experiencing sudden high fever, nausea, and severe body pain for 13 days."
+79,male,25,moderate,103.6,8,Typhoid,"Experiencing steady high fever, fatigue, and stomach pain for 25 days."
+44,male,8,moderate,103.4,8,Typhoid,"Experiencing prolonged high fever, abdominal discomfort, and fatigue for 8 days."
+29,male,10,severe,103.1,8,Typhoid,"I have sustained fever, weakness, and diarrhea for 10 days."
+72,male,5,severe,103.7,9,Dengue,My eyes hurt badly with high fever and severe muscle aches for 5 days.
+25,male,14,mild,97.6,1,Allergy,"I have congestion, itchy eyes, and a scratchy throat for 14 days."
+35,female,12,mild,98.6,3,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 12 days."
+73,male,12,severe,104.2,7,Dengue,"Experiencing sudden high fever, nausea, and severe body pain for 12 days."
+23,female,6,mild,97.6,3,Allergy,"I've been having nasal irritation, watery eyes, and skin rash for 6 days."
+23,female,4,moderate,102.6,10,Dengue,"Experiencing high fever, nausea, and pain all over my body for 4 days."
+28,male,25,severe,103.1,6,Typhoid,My fever won't go down and I have stomach pain with headache for 25 days.
+52,female,10,moderate,102.6,9,Dengue,"I have excruciating body pain, high fever, and pain behind eyes for 10 days."
+57,male,22,mild,99.2,2,Allergy,"I've been having nasal irritation, watery eyes, and skin rash for 22 days."
+18,male,11,mild,39.9,7,Typhoid,"I have fever, loss of appetite, constipation and abdominal pain for 9 days."
+70,male,15,severe,103.0,8,Pneumonia,I've been having trouble breathing with chest pain and high fever for 15 days.
+20,male,8,severe,100.5,7,Flu,"Experiencing extreme fatigue, high fever, and runny nose for 8 days."
+50,female,4,mild,100.3,1,Common Cold,"I've had a mild fever, runny nose, and feel fatigued for the last 4 days."
+40,male,10,severe,104.5,5,Malaria,My fever keeps coming back with profuse sweating and body pain for 10 days.
+31,female,4,mild,37.3,5,Common Cold,"I have headache, mild body pain and watery eyes for 2 days."
+55,male,4,severe,101.0,7,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 4 days."
+72,female,9,mild,98.5,4,Common Cold,"I have a mild cough, runny nose, and feel tired for the past 9 days."
+64,male,7,severe,104.2,8,Dengue,"Experiencing high fever, skin rash, and agonizing body pain for 7 days."
+42,male,28,severe,101.6,6,Typhoid,"I've been having persistent fever, loss of appetite, and abdominal pain for 28 days."
+60,female,19,moderate,97.6,1,Allergy,"Experiencing nasal drip, sneezing, and puffy eyes for 19 days."
+26,female,5,mild,98.1,3,Allergy,"Experiencing skin rash, nasal congestion, and watery eyes for 5 days."
+80,male,18,severe,103.9,6,Typhoid,"I've had sustained fever, diarrhea, and loss of appetite for 18 days."
+61,female,5,moderate,101.9,5,Flu,"I've had fever with chills, dry cough, and severe fatigue for 5 days."
+51,female,5,moderate,39.8,10,Dengue,"I have high fever, severe headache, joint pain and rash for 5 days."
+48,female,7,severe,104.2,7,Dengue,"I have high fever with joint pain, muscle pain, and skin rash for 7 days."
+53,male,12,severe,101.2,8,Pneumonia,"I've had stabbing chest pain, productive cough, and high fever for 12 days."
+47,female,8,severe,102.7,7,Flu,"Experiencing high fever, aching body, sore throat, and fatigue for 8 days."
+45,male,5,moderate,102.0,8,Dengue,"I've had intense headache behind my eyes, high fever, and fatigue for 5 days."
+50,female,3,severe,103.0,4,Flu,"I've been shivering with fever, headache, and severe body aches for 3 days."
+36,male,12,moderate,102.3,8,Malaria,I've been vomiting with high fever and severe body aches for 12 days.
+58,female,10,severe,103.5,6,Dengue,My fever is very high with extreme body aches and eye pain for 10 days.
+48,male,16,severe,101.7,8,Typhoid,"I've had continuous high fever, loose motions, and loss of energy for 16 days."
+70,female,10,moderate,100.1,1,Common Cold,I've been feeling congested with sneezing and a slight fever for 10 days.
+66,male,15,mild,100.3,6,Bronchitis,"I've had wheezing, a wet cough, and chest discomfort for about 15 days."
+27,male,27,mild,99.3,3,Allergy,"I've had sneezing episodes, nasal congestion, and eye irritation for 27 days."
+68,male,13,severe,99.9,4,Bronchitis,"I have a lingering cough, sore chest, and feel run down for 13 days."
+55,male,9,severe,100.5,7,Flu,"I've been sick with high fever, body aches, and headache for 9 days."
+69,female,26,mild,97.5,2,Allergy,"I've had sneezing episodes, nasal congestion, and eye irritation for 26 days."
+73,male,10,moderate,99.2,4,Common Cold,My nose has been running constantly with sneezing and a mild cough for 10 days.
+20,female,6,severe,38.7,8,Flu,"I have chills, headache, muscle pain and loss of appetite for 6 days."
+51,male,19,moderate,98.8,3,Allergy,"I've been sneezing constantly with itchy, watery eyes for 19 days."
+29,female,13,severe,102.2,8,Dengue,"I've had high fever, nosebleeds, and intense headache for 13 days."
+79,female,28,severe,104.3,4,Typhoid,I have a persistent high fever with abdominal pain and extreme tiredness for 28 days.
+38,female,8,moderate,101.3,7,Dengue,"Experiencing sudden high fever, nausea, and severe body pain for 8 days."
+26,male,8,moderate,101.0,4,Flu,"I've been sick with high fever, body aches, and headache for 8 days."
+40,female,5,severe,103.8,7,Dengue,My body is aching severely with high fever and headache for 5 days.
+60,male,4,severe,102.9,5,Flu,"I've had fever, sore throat, runny nose, and extreme weakness for 4 days."
+29,male,8,severe,101.4,7,Flu,"My fever started suddenly with chills, cough, and weakness for 8 days."
+36,male,7,mild,38.5,9,Flu,"I have high fever, dry cough, severe body ache and extreme fatigue for 5 days."
+70,male,22,moderate,99.1,3,Allergy,"I have itchy, red eyes, frequent sneezing, and nasal drip for 22 days."
+22,male,3,moderate,102.8,4,Flu,"I have sudden onset fever, chills, and severe muscle pain for 3 days."
+47,male,10,moderate,102.8,9,Dengue,"I have high fever, loss of appetite, and severe joint pain for 10 days."
+53,female,14,moderate,98.9,6,Bronchitis,I have a hacking cough with mucus and my chest hurts for 14 days.
+40,male,13,severe,101.4,8,Malaria,"My fever comes and goes with chills, headache, and fatigue for 13 days."
+35,male,6,severe,37.4,5,Allergy,I have itching and hives after exposure to dust for 3 days.
+65,female,4,mild,39.3,7,Dengue,I have high fever with pain behind the eyes and muscle pain for 4 days.
+30,male,30,mild,98.7,3,Allergy,"Experiencing itchy eyes, blocked nose, and throat irritation for 30 days."
+42,female,4,mild,99.0,1,Allergy,My nose has been running with sneezing and skin hives for 4 days.
+47,female,4,moderate,98.4,1,Common Cold,"I've had a mild fever, runny nose, and feel fatigued for the last 4 days."
+58,male,4,moderate,99.5,4,Common Cold,"I have congestion, mild body aches, and a sore throat for the past 4 days."
+30,male,6,severe,39.2,6,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+50,female,3,mild,99.0,2,Allergy,"I've been sneezing with itchy skin and watery, red eyes for 3 days."
+54,male,5,moderate,102.1,7,Pneumonia,I've been having trouble breathing with chest pain and high fever for 5 days.
+48,male,9,severe,102.0,6,Malaria,"Experiencing high fever, cold sweats, and severe joint pain for 9 days."
+37,female,16,moderate,99.0,3,Allergy,"I've had allergic reactions with sneezing, itching, and congestion for 16 days."
+59,female,21,moderate,99.2,6,Bronchitis,My cough produces a lot of phlegm and I have a mild fever for 21 days.
+64,male,17,severe,102.0,6,Pneumonia,"I've been coughing up thick mucus, have chest pain, and a high fever for 17 days."
+72,female,21,moderate,99.1,3,Bronchitis,"Experiencing chest discomfort, cough with sputum, and tiredness for 21 days."
+44,male,7,moderate,101.0,4,Flu,"I have chills, aching muscles, and a persistent dry cough for 7 days."
+26,male,20,moderate,99.6,5,Bronchitis,I've been coughing with thick mucus and feel short of breath for 20 days.
+19,female,9,moderate,103.8,9,Dengue,"I have fever, retro-orbital pain, and my joints are very painful for 9 days."
+52,female,10,moderate,104.2,7,Malaria,I have fever that spikes suddenly with chills and nausea for 10 days.
+66,male,5,mild,99.5,4,Common Cold,"I've had a runny nose, mild cough, and body aches for about 5 days."
+53,male,5,mild,38.9,9,Pneumonia,"I have high fever, chest pain, productive cough and shortness of breath for 6 days."
+23,female,13,severe,102.5,8,Malaria,"Experiencing high fever, body aches, and nausea for the past 13 days."
+72,female,10,severe,101.9,9,Dengue,My body is aching severely with high fever and headache for 10 days.
+40,male,5,moderate,99.8,1,Common Cold,"I've had a runny nose, mild cough, and body aches for about 5 days."
+72,male,7,severe,101.2,8,Typhoid,"I've been having sustained fever, poor appetite, and constipation for 7 days."
+23,male,10,moderate,102.2,7,Malaria,I have high temperature with shaking chills and muscle aches for 10 days.
+29,male,3,moderate,99.1,1,Allergy,"Experiencing constant sneezing, itchy eyes, and mild congestion for 3 days."
+37,female,10,severe,101.8,5,Typhoid,"I have prolonged fever, headache, and abdominal cramps for 10 days."
+34,male,10,severe,38.6,7,Bronchitis,"I have persistent cough, chest discomfort and mild fever for 10 days."
+73,male,15,moderate,98.3,3,Allergy,My eyes are itchy and watery with constant sneezing for 15 days.
+47,female,9,severe,38.6,9,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+25,male,6,mild,99.5,4,Common Cold,"I have a head cold with sneezing, congestion, and watery eyes for 6 days."
+35,female,5,severe,38.9,6,Flu,"I have high fever, dry cough, severe body ache and extreme fatigue for 5 days."
+37,female,13,moderate,102.9,6,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 13 days."
+22,male,11,mild,99.8,6,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 11 days.
+75,male,9,moderate,99.1,2,Common Cold,"I have a mild cold with runny nose, headache, and fatigue lasting 9 days."
+70,male,6,moderate,100.6,4,Flu,"I have severe body aches, fever, and feel completely drained for 6 days."
+20,male,5,moderate,99.7,2,Common Cold,"Feeling tired with a stuffy nose, sore throat, and mild headache for 5 days."
+22,male,22,moderate,98.1,1,Allergy,My skin has been itchy with sneezing and watery eyes for 22 days.
+54,male,10,moderate,39.5,5,Typhoid,"I have fever, loss of appetite, constipation and abdominal pain for 9 days."
+32,female,19,moderate,99.1,1,Allergy,"I have a runny nose, sneezing, and itchy skin for the past 19 days."
+66,female,18,moderate,100.3,3,Bronchitis,"Experiencing chest discomfort, cough with sputum, and tiredness for 18 days."
+28,male,5,moderate,102.6,7,Flu,"I've been feeling awful with high fever, chills, and cough for 5 days."
+52,female,5,moderate,101.2,5,Flu,"I have severe body aches, fever, and feel completely drained for 5 days."
+78,male,8,moderate,103.4,4,Flu,"I have sudden onset fever, chills, and severe muscle pain for 8 days."
+40,male,14,moderate,103.5,8,Pneumonia,I have a deep chest cough with yellow-green sputum and high fever for 14 days.
+67,female,3,severe,102.3,5,Flu,"I've had a high fever with body aches, headache, and sore throat for 3 days."
+65,male,14,severe,103.9,4,Pneumonia,I'm coughing constantly with thick mucus and have a high fever for 14 days.
+65,male,9,moderate,101.6,6,Flu,"I've been having body aches, dry cough, and high fever for 9 days."
+49,female,12,severe,104.1,8,Malaria,I have high fever alternating with chills and extreme tiredness for 12 days.
+79,male,6,severe,104.7,9,Malaria,"Experiencing fever spikes with chills, joint pain, and loss of appetite for 6 days."
+49,male,15,moderate,102.2,4,Typhoid,My fever won't go down and I have stomach pain with headache for 15 days.
+67,female,9,moderate,98.3,1,Allergy,"I've had itchy, watery eyes, constant sneezing, and nasal congestion for 9 days."
+54,male,22,moderate,99.0,3,Allergy,My nose has been running with sneezing and skin hives for 22 days.
+76,female,7,severe,100.9,4,Pneumonia,"I've had stabbing chest pain, productive cough, and high fever for 7 days."
+24,male,5,moderate,99.4,4,Common Cold,"I've had a mild cough, congestion, and watery eyes for 5 days now."
+77,male,3,mild,98.7,1,Common Cold,"I've had a mild cough, congestion, and watery eyes for 3 days now."
+43,male,6,severe,103.4,7,Dengue,"I have a sudden high fever, severe headache, and muscle cramps for 6 days."
+42,male,8,moderate,102.2,4,Flu,I've had sudden high fever with body pain and weakness for 8 days.
+63,male,20,severe,99.1,5,Bronchitis,"I have chest tightness, productive cough, and wheezing for the past 20 days."
+51,male,10,severe,102.9,7,Flu,"I have high fever, dry cough, severe body ache, and extreme fatigue for 10 days."
+77,male,5,severe,101.6,6,Malaria,I have fever that spikes suddenly with chills and nausea for 5 days.
+19,male,17,moderate,99.2,2,Allergy,"I've had nasal drip, sneezing, and skin irritation for 17 days."
+44,female,13,mild,98.2,3,Allergy,I've been having skin rash with nasal congestion and watery eyes for 13 days.
+48,female,4,moderate,37.1,5,Allergy,I have itching and hives after exposure to dust for 3 days.
+54,female,8,moderate,102.8,6,Dengue,I have severe joint and muscle pain with high fever for 8 days.
+43,male,12,severe,100.2,5,Bronchitis,"Experiencing a nagging cough, mild fever, and sore chest for 12 days."
+31,male,4,severe,39.2,6,Flu,I have high fever with body pain and weakness for 4 days.
+39,female,20,moderate,101.0,5,Typhoid,"Experiencing high fever, constipation, and extreme fatigue for 20 days."
+80,male,28,moderate,101.5,7,Typhoid,My fever has been unremitting with stomach pain and weakness for 28 days.
+72,male,4,severe,101.6,6,Dengue,"I have high fever, extreme weakness, and pain behind both eyes for 4 days."
+44,female,5,mild,39.2,8,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+45,male,10,moderate,99.5,4,Common Cold,"I have congestion, mild body aches, and a sore throat for the past 10 days."
+25,male,7,severe,38.6,7,Flu,I have high fever with body pain and weakness for 4 days.
+70,male,1,moderate,99.4,2,Allergy,"I have a runny nose, sneezing, and itchy skin for the past 1 days."
+29,female,13,severe,101.1,9,Malaria,I've been feeling very weak with recurring fever and sweating for 13 days.
+27,female,9,severe,101.5,5,Bronchitis,"I have difficulty breathing, persistent cough, and mild temperature for 9 days."
+48,male,14,severe,102.2,5,Malaria,"I have periodic high fever, nausea, and severe body aches for 14 days."
+72,male,21,severe,100.6,4,Bronchitis,"I have a lingering cough, sore chest, and feel run down for 21 days."
+20,male,9,severe,39.2,6,Typhoid,"I have sustained high fever, stomach pain, headache and weakness for 8 days."
+33,female,8,mild,98.6,6,Bronchitis,My cough produces a lot of phlegm and I have a mild fever for 8 days.
+69,male,23,severe,104.1,4,Typhoid,"I have high fever, weakness, stomach cramps, and no desire to eat for 23 days."
+32,female,4,moderate,102.5,8,Dengue,I have high fever with bruising easily and extreme tiredness for 4 days.
+26,male,19,moderate,100.1,4,Bronchitis,"Experiencing persistent coughing, mucus production, and fatigue for 19 days."
+34,male,3,moderate,97.7,1,Allergy,I've had itching and hives after exposure to dust for 3 days.
+73,male,21,severe,103.2,7,Pneumonia,I've been running a high fever with severe cough and extreme tiredness for 21 days.
+58,male,8,severe,38.6,4,Bronchitis,"I have persistent cough, chest discomfort and mild fever for 10 days."
+57,female,7,severe,102.5,4,Pneumonia,I have a deep cough with greenish phlegm and chest discomfort for 7 days.
+79,male,5,severe,103.5,9,Dengue,"I have high fever, loss of appetite, and severe joint pain for 5 days."
+49,female,7,moderate,100.1,3,Bronchitis,My cough produces a lot of phlegm and I have a mild fever for 7 days.
+31,female,6,severe,103.8,6,Pneumonia,I can barely breathe and have a high fever with chest tightness for 6 days.
+26,male,5,moderate,98.9,1,Common Cold,I've been feeling congested with sneezing and a slight fever for 5 days.
+65,male,7,mild,98.4,3,Allergy,"I have skin hives, runny nose, and throat itchiness for 7 days."
+54,male,25,severe,103.8,8,Typhoid,"I've had high fever, loss of appetite, and constipation for 25 days."
+32,female,13,severe,103.5,8,Dengue,"I have high fever, severe headache, and pain behind my eyes for 13 days."
+53,male,30,mild,99.0,3,Allergy,"Experiencing constant sneezing, itchy eyes, and mild congestion for 30 days."
+23,male,4,severe,102.8,9,Malaria,"I have cyclical fever, nausea, vomiting, and extreme body pain for 4 days."
+71,female,24,severe,101.5,5,Typhoid,"Experiencing continuous fever, stomach discomfort, and fatigue for 24 days."
+40,female,6,moderate,102.8,8,Malaria,"I have recurrent fever with nausea, sweating, and weakness for 6 days."
+36,female,17,moderate,97.9,1,Allergy,"I have swollen nasal passages, watery eyes, and skin rash for 17 days."
+46,female,20,severe,101.7,8,Pneumonia,My chest hurts when I cough and I have a high temperature for 20 days.
+69,male,6,severe,101.2,9,Dengue,"I have fever, retro-orbital pain, and my joints are very painful for 6 days."
+73,male,14,mild,98.8,3,Allergy,"I've been sneezing constantly with itchy, watery eyes for 14 days."
+32,male,13,moderate,104.0,6,Dengue,"I have excruciating body pain, high fever, and pain behind eyes for 13 days."
+57,female,10,severe,102.1,5,Flu,"I have a high temperature, dry cough, and can barely get out of bed for 10 days."
+39,female,6,mild,98.3,2,Common Cold,"Feeling tired with a stuffy nose, sore throat, and mild headache for 6 days."
+76,male,1,moderate,99.0,3,Allergy,I've had itching and hives after exposure to dust for 1 days.
+57,male,4,moderate,100.4,7,Flu,I've been having chills and fever with severe headache and cough for 4 days.
+29,female,13,moderate,104.8,9,Malaria,"Experiencing high fever, body aches, and nausea for the past 13 days."
+24,male,9,moderate,103.0,5,Flu,"I've had a high fever with body aches, headache, and sore throat for 9 days."
+66,male,6,moderate,104.2,9,Malaria,I've been experiencing chills followed by fever and severe weakness for 6 days.
+36,female,4,mild,39.7,8,Dengue,"I have sudden high fever, nausea and severe body pain for 6 days."
+20,male,10,severe,104.6,9,Malaria,I've been experiencing chills followed by fever and severe weakness for 10 days.
+34,male,12,severe,102.6,8,Dengue,I have severe joint and muscle pain with high fever for 12 days.
+30,male,6,moderate,97.9,1,Allergy,"Experiencing sneezing fits, watery eyes, and an itchy throat for 6 days."
+50,male,9,moderate,103.0,5,Flu,"I have extreme tiredness, high fever, and muscle pain for 9 days."
+62,female,19,moderate,100.7,4,Pneumonia,"I have fever with chills, cough with phlegm, and difficulty breathing for 19 days."
+51,female,7,mild,39.5,9,Dengue,"I have sudden high fever, nausea and severe body pain for 6 days."
+68,female,19,moderate,101.7,4,Pneumonia,"My chest feels heavy, I have a high fever, and I'm very weak for 19 days."
+20,male,8,moderate,101.1,9,Malaria,I've been vomiting with high fever and severe body aches for 8 days.
+36,male,6,moderate,100.1,3,Common Cold,"I've had a runny nose, mild cough, and body aches for about 6 days."
+68,male,12,moderate,103.4,8,Pneumonia,I've been running a high fever with severe cough and extreme tiredness for 12 days.
+35,male,11,moderate,104.4,8,Typhoid,"I've had high fever, loss of appetite, and constipation for 11 days."
+21,male,10,moderate,99.0,1,Common Cold,My nose is stuffy and I have a mild sore throat with tiredness for 10 days.
+49,female,15,moderate,98.6,6,Bronchitis,I've had a cough that worsens at night with mucus and chest pain for 15 days.
+30,male,14,mild,98.4,1,Allergy,"Experiencing nasal drip, sneezing, and puffy eyes for 14 days."
+66,female,14,moderate,99.4,3,Bronchitis,My cough has been getting worse with wheezing and mild fever for 14 days.
+39,female,3,severe,102.8,8,Malaria,I have fever that spikes suddenly with chills and nausea for 3 days.
+42,female,15,mild,100.4,5,Bronchitis,I've been coughing up mucus for 15 days with wheezing and tiredness.
+44,female,26,mild,97.8,3,Allergy,"I have congestion, itchy eyes, and a scratchy throat for 26 days."
+43,female,17,severe,101.3,5,Pneumonia,I have a deep cough with greenish phlegm and chest discomfort for 17 days.
+27,female,9,moderate,102.7,7,Flu,"I have fever, severe headache, body aches, and no appetite for 9 days."
+32,male,8,moderate,99.0,1,Common Cold,"Experiencing congestion, watery eyes, and a scratchy throat for 8 days."
+49,male,5,moderate,102.2,7,Flu,"I've been shivering with fever, headache, and severe body aches for 5 days."
+34,female,5,mild,98.0,2,Allergy,"I have hives on my skin, runny nose, and itchy throat for 5 days."
+61,male,5,moderate,39.9,9,Malaria,I have fever with chills and vomiting for 7 days.
+67,male,21,moderate,100.0,3,Bronchitis,I have a deep cough producing clear mucus with mild chest pain for 21 days.
+37,female,3,moderate,37.6,6,Common Cold,"I have mild fever, runny nose, sneezing and sore throat for 3 days."
+69,female,10,severe,104.7,7,Malaria,"Experiencing intermittent fever with chills, body aches, and weakness for 10 days."
+79,male,15,mild,100.9,4,Bronchitis,I've been coughing non-stop with chest soreness and mild fever for 15 days.
+65,female,6,moderate,99.8,3,Common Cold,"I've had a mild fever, runny nose, and feel fatigued for the last 6 days."
+60,female,13,moderate,101.0,9,Malaria,"I have recurrent fever with nausea, sweating, and weakness for 13 days."
+20,male,4,mild,98.5,1,Common Cold,I've been feeling congested with sneezing and a slight fever for 4 days.
+45,male,11,severe,101.5,6,Dengue,"Experiencing sudden high fever, nausea, and severe body pain for 11 days."
+51,female,7,mild,37.3,3,Allergy,"I have sneezing, itchy eyes, runny nose and skin rash for 7 days."
+70,male,6,severe,100.4,7,Flu,"I have fever, severe headache, body aches, and no appetite for 6 days."
+57,male,6,moderate,38.8,9,Pneumonia,"I have severe cough, chest pain and high fever for 7 days."
+44,female,9,moderate,39.6,6,Typhoid,"I have fever, loss of appetite, constipation and abdominal pain for 9 days."
+49,male,6,moderate,101.3,8,Pneumonia,"My chest feels heavy, I have a high fever, and I'm very weak for 6 days."
+51,male,27,mild,99.2,1,Allergy,"I have swollen nasal passages, watery eyes, and skin rash for 27 days."
+52,male,12,mild,101.5,6,Bronchitis,I've had a cough that won't go away with mucus and fatigue for 12 days.
+46,male,8,severe,40.1,8,Malaria,I have fever with chills and vomiting for 7 days.

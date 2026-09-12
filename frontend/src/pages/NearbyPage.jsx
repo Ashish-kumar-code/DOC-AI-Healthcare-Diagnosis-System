@@ -1,25 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Building2, Stethoscope, Pill, Search, Navigation, Loader2, ExternalLink } from 'lucide-react';
+import { MapPin, Building2, Stethoscope, Pill, Search, Navigation, Loader2, Clock, Phone, Globe } from 'lucide-react';
 import DashboardLayout from '../components/layouts/DashboardLayout';
 import PageTransition from '../components/layouts/PageTransition';
 import { EmptyState } from '../components/data/EmptyState';
 import { ErrorAlert } from '../components/UiComponents';
 import { locationApi } from '../api/client';
-import { PLACE_TYPES } from '../utils/constants';
 import { staggerContainer, staggerItem } from '../utils/animations';
 
-const ICONS = { hospital: Building2, doctor: Stethoscope, pharmacy: Pill };
+const PLACE_TYPES = [
+  { value: 'hospital', label: 'Hospitals', icon: Building2, description: 'Find hospitals near your location', color: 'text-red-500', bg: 'bg-red-50' },
+  { value: 'doctor', label: 'Doctors & Clinics', icon: Stethoscope, description: 'Find doctors and clinics nearby', color: 'text-blue-500', bg: 'bg-blue-50' },
+  { value: 'pharmacy', label: 'Pharmacies', icon: Pill, description: 'Find pharmacies and chemists nearby', color: 'text-green-500', bg: 'bg-green-50' },
+];
 
-const calculateDistance = (lat1, lon1, lat2, lon2) => {
-  const R = 6371; // Earth radius in km
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLon = (lon2 - lon1) * Math.PI / 180;
-  const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-    Math.sin(dLon / 2) * Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  return (R * c).toFixed(1);
+const formatDistance = (meters) => {
+  if (!meters && meters !== 0) return null;
+  if (meters < 1000) return `${meters}m`;
+  return `${(meters / 1000).toFixed(1)} km`;
 };
 
 export default function NearbyPage() {
@@ -31,48 +29,47 @@ export default function NearbyPage() {
   const [locating, setLocating] = useState(false);
   const [userCoords, setUserCoords] = useState(null);
 
-  const fetchNearby = async (lat, lon, type) => {
+  const fetchNearby = useCallback(async (lat, lon, type) => {
     setLoading(true); setError('');
     try {
       const res = await locationApi.nearby(lat, lon, type);
       setPlaces(res.data.data || []);
-    } catch (err) { setError(err.response?.data?.message || 'Search failed'); }
+    } catch (err) {
+      setError(err.response?.data?.error || err.response?.data?.message || 'Search failed. Please try again.');
+    }
     setLoading(false);
-  };
+  }, []);
 
-  const handleGeoSearch = () => {
+  const handleGeoSearch = useCallback(() => {
     if (!navigator.geolocation) { setError('Geolocation is not supported by your browser'); return; }
     setLocating(true); setError('');
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setLocating(false);
-        setUserCoords({ lat: pos.coords.latitude, lon: pos.coords.longitude });
-        fetchNearby(pos.coords.latitude, pos.coords.longitude, placeType);
+        const coords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+        setUserCoords(coords);
+        fetchNearby(coords.lat, coords.lon, placeType);
       },
       () => { setError('Location access denied. Please enable GPS permissions.'); setLocating(false); },
-      { timeout: 10000 }
+      { timeout: 10000, enableHighAccuracy: true }
     );
-  };
+  }, [fetchNearby, placeType]);
 
   useEffect(() => {
-    // Auto-locate on mount
     handleGeoSearch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    // Re-fetch when place type changes, if we already have coords
     if (userCoords && !locating) {
       fetchNearby(userCoords.lat, userCoords.lon, placeType);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [placeType]);
+  }, [placeType]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleManualSearch = async (e) => {
     e.preventDefault();
     if (!manual.trim()) return;
     setLoading(true); setError('');
-    setUserCoords(null); // Reset user coords if manual searching
+    setUserCoords(null);
     try {
       const res = await locationApi.manualSearch(manual);
       setPlaces(res.data.data || []);
@@ -80,27 +77,36 @@ export default function NearbyPage() {
     setLoading(false);
   };
 
-  const PlaceIcon = ICONS[placeType] || MapPin;
+  const activeType = PLACE_TYPES.find(t => t.value === placeType) || PLACE_TYPES[0];
+  const PlaceIcon = activeType.icon;
 
   return (
     <DashboardLayout>
       <PageTransition>
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-text-primary flex items-center gap-3"><MapPin className="w-7 h-7 text-danger" /> Nearby Facilities</h1>
+          <h1 className="text-2xl font-bold text-text-primary flex items-center gap-3">
+            <MapPin className="w-7 h-7 text-danger" /> Nearby Facilities
+          </h1>
           <p className="text-text-secondary mt-1">Find hospitals, clinics, and pharmacies near you</p>
         </div>
 
         {error && <ErrorAlert message={error} onDismiss={() => setError('')} />}
 
-        {/* Type Selection */}
+        {/* Type Selection Cards */}
         <div className="grid sm:grid-cols-3 gap-4 mb-6">
           {PLACE_TYPES.map((t) => {
-            const Icon = ICONS[t.value] || MapPin;
+            const Icon = t.icon;
+            const isActive = placeType === t.value;
             return (
               <button key={t.value} onClick={() => setPlaceType(t.value)}
-                className={`card-static text-left transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg group ${placeType === t.value ? 'border-primary bg-primary/5 shadow-md scale-[1.02] ring-2 ring-primary/20' : 'hover:border-primary/40 hover:bg-white'}`}>
-                <Icon className={`w-6 h-6 mb-2 transition-colors duration-300 ${placeType === t.value ? 'text-primary' : 'text-text-tertiary group-hover:text-primary'}`} />
+                className={`card-static text-left transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg group ${
+                  isActive
+                    ? 'border-primary bg-primary/5 shadow-md scale-[1.02] ring-2 ring-primary/20'
+                    : 'hover:border-primary/40 hover:bg-white'
+                }`}>
+                <Icon className={`w-6 h-6 mb-2 transition-colors duration-300 ${isActive ? t.color : 'text-text-tertiary group-hover:text-primary'}`} />
                 <div className="text-sm font-semibold text-text-primary">{t.label}</div>
+                <div className="text-xs text-text-tertiary mt-1">{t.description}</div>
               </button>
             );
           })}
@@ -131,26 +137,53 @@ export default function NearbyPage() {
           </form>
         </div>
 
+        {/* Result Count */}
+        {!loading && places.length > 0 && (
+          <div className="text-sm text-text-secondary mb-4">
+            Found <span className="font-semibold text-text-primary">{places.length}</span> {activeType.label.toLowerCase()} near you
+          </div>
+        )}
+
         {/* Results */}
         {loading ? (
-          <div className="space-y-3">{[...Array(3)].map((_, i) => <div key={i} className="skeleton h-24 rounded-2xl" />)}</div>
+          <div className="space-y-3">{[...Array(4)].map((_, i) => <div key={i} className="skeleton h-28 rounded-2xl" />)}</div>
         ) : places.length > 0 ? (
           <motion.div className="space-y-3" variants={staggerContainer} initial="initial" animate="animate">
             {places.map((p, i) => {
-              const distance = userCoords && p.location ? calculateDistance(userCoords.lat, userCoords.lon, p.location.lat || p.location.latitude, p.location.lng || p.location.longitude) : null;
-              const mapUrl = p.map_url || (p.place_id ? `https://www.google.com/maps/place/?q=place_id:${p.place_id}` : (p.location ? `https://www.google.com/maps?q=${p.location.lat || p.location.latitude},${p.location.lng || p.location.longitude}` : null));
+              const distance = formatDistance(p.distance_meters);
+              const mapUrl = p.map_url || (p.location ? `https://www.google.com/maps?q=${p.location.lat},${p.location.lng}` : null);
               return (
-                <motion.div key={i} variants={staggerItem} className="card-static flex items-start gap-4 group">
-                  <div className="w-11 h-11 rounded-xl bg-danger/10 flex items-center justify-center shrink-0">
-                    <PlaceIcon className="w-5 h-5 text-danger" />
+                <motion.div key={i} variants={staggerItem} className="card-static flex items-start gap-4 group hover:shadow-md transition-shadow">
+                  <div className={`w-11 h-11 rounded-xl ${activeType.bg} flex items-center justify-center shrink-0`}>
+                    <PlaceIcon className={`w-5 h-5 ${activeType.color}`} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-sm font-semibold text-text-primary">{p.name}</h3>
-                    <p className="text-xs text-text-tertiary mt-1">{p.address || p.vicinity || p.formatted_address || 'No address'}</p>
+                    {p.address && <p className="text-xs text-text-tertiary mt-1 truncate">{p.address}</p>}
                     <div className="flex flex-wrap gap-3 mt-2">
-                      {distance && <p className="text-xs text-primary font-medium">📍 {distance} km away</p>}
-                      {p.phone && <p className="text-xs text-text-tertiary">📞 {p.phone}</p>}
-                      {p.rating && <p className="text-xs text-warning">★ {p.rating} {p.user_ratings_total ? `(${p.user_ratings_total})` : ''}</p>}
+                      {distance && (
+                        <span className="inline-flex items-center gap-1 text-xs text-primary font-medium bg-primary/5 px-2 py-0.5 rounded-full">
+                          <MapPin className="w-3 h-3" /> {distance}
+                        </span>
+                      )}
+                      {p.phone && (
+                        <a href={`tel:${p.phone}`} className="inline-flex items-center gap-1 text-xs text-text-secondary hover:text-primary transition-colors">
+                          <Phone className="w-3 h-3" /> {p.phone}
+                        </a>
+                      )}
+                      {p.opening_hours && (
+                        <span className="inline-flex items-center gap-1 text-xs text-text-tertiary">
+                          <Clock className="w-3 h-3" /> {p.opening_hours}
+                        </span>
+                      )}
+                      {p.website && (
+                        <a href={p.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-500 hover:text-blue-700 transition-colors">
+                          <Globe className="w-3 h-3" /> Website
+                        </a>
+                      )}
+                      {p.rating && (
+                        <span className="text-xs text-warning">★ {p.rating} {p.user_ratings_total ? `(${p.user_ratings_total})` : ''}</span>
+                      )}
                     </div>
                   </div>
                   {mapUrl && (
@@ -164,7 +197,7 @@ export default function NearbyPage() {
             })}
           </motion.div>
         ) : (
-          !loading && <EmptyState icon={MapPin} title="No results" description="Search or use your location to find nearby facilities." />
+          !loading && <EmptyState icon={MapPin} title="No results" description={`No ${activeType.label.toLowerCase()} found nearby. Try using GPS or search by location name.`} />
         )}
       </PageTransition>
     </DashboardLayout>

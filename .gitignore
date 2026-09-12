@@ -42,16 +42,7 @@ node_modules/
 dist/
 build/
 
-# ML Models (optional)
-# app/ml/*.h5
-# app/ml/*.joblib
-
-# Dataset
-backend/datasets/
-
-# Virtual Environments
-.venv/
-venv/
-env/
-ENV/
-backend/.venv_broken/
+# ML Models (large binary files)
+# Uncomment if you don't want to track these in git:
+# backend/app/ml/*.h5
+# backend/app/ml/*.joblib
