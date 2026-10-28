@@ -31,12 +31,13 @@ def nearby():
 def manual_search():
     data = request.get_json() or {}
     query = data.get("query")
+    place_type = data.get("type", "hospital")
 
     if not query:
         return jsonify({"error": "query is required"}), 400
 
     try:
-        results = service.manual_search(query_text=query)
+        results = service.manual_search(query_text=query, place_type=place_type)
         return jsonify({"status": "ok", "data": results}), 200
     except Exception as exc:
         return jsonify({"error": "Unable to perform manual search"}), 500

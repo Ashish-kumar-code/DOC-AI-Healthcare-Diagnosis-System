@@ -2,21 +2,21 @@ services:
   - type: web
     name: doc-ai-backend
     env: python
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && gunicorn run:app --config gunicorn.conf.py
+    plan: free
+    buildCommand: |
+      cd backend
+      pip install -r requirements.txt
+    startCommand: |
+      cd backend
+      gunicorn run:app --config gunicorn.conf.py
+    healthCheckPath: /api/health
     envVars:
       - key: FLASK_ENV
         value: production
+      - key: SECRET_KEY
+        generateValue: true
       - key: JWT_SECRET_KEY
-<<<<<<< HEAD
         generateValue: true
-      - key: SECRET_KEY
-        generateValue: true
-=======
-        value: temporary_secret_key_change_me_later
-      - key: SECRET_KEY
-        value: temporary_session_key_change_me_later
->>>>>>> fdf3b55c0f57d06ab261baabb3f5a33b6ffc5b23
       - key: SQLALCHEMY_DATABASE_URI
         fromDatabase:
           name: doc-ai-db
@@ -33,11 +33,22 @@ services:
         value: "4"
       - key: GUNICORN_TIMEOUT
         value: "120"
+      - key: LOG_LEVEL
+        value: INFO
+      - key: LOG_DIR
+        value: logs
+      - key: RATELIMIT_ENABLED
+        value: "true"
+      - key: RATELIMIT_DEFAULT
+        value: 100/60
 
   - type: web
     name: doc-ai-frontend
     env: static
-    buildCommand: cd frontend && npm install && npm run build
+    buildCommand: |
+      cd frontend
+      npm install
+      npm run build
     staticPublishPath: frontend/dist
     headers:
       - path: /*
@@ -47,6 +58,13 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        value: https://doc-ai-backend.onrender.com/api
+      - key: VITE_APP_NAME
+        value: DOC AI
+      - key: VITE_APP_VERSION
+        value: 0.1.0
 
 databases:
   - name: doc-ai-db

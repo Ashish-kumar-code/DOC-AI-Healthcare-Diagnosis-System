@@ -145,8 +145,8 @@ export const chatApi = {
 export const locationApi = {
   nearby: (latitude, longitude, type = 'hospital', radius = 5000) =>
     api.post('/location/nearby', { latitude, longitude, type, radius }),
-  manualSearch: (query) =>
-    api.post('/location/manual-search', { query }),
+  manualSearch: (query, type = 'hospital') =>
+    api.post('/location/manual-search', { query, type }),
 }
 
 export const reportApi = {

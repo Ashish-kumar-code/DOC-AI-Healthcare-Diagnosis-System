@@ -36,7 +36,7 @@ class Config:
 
     # File uploads
     UPLOAD_FOLDER = os.getenv("UPLOAD_FOLDER", "app/static/uploads")
-    MAX_CONTENT_LENGTH = 8 * 1024 * 1024  # 8 MB
+    MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16 MB
 
     # External APIs
     GOOGLE_PLACES_API_KEY = os.getenv("GOOGLE_PLACES_API_KEY", "")

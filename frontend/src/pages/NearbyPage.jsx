@@ -71,7 +71,7 @@ export default function NearbyPage() {
     setLoading(true); setError('');
     setUserCoords(null);
     try {
-      const res = await locationApi.manualSearch(manual);
+      const res = await locationApi.manualSearch(manual, placeType);
       setPlaces(res.data.data || []);
     } catch (err) { setError(err.response?.data?.message || 'Search failed'); }
     setLoading(false);
@@ -188,7 +188,7 @@ export default function NearbyPage() {
                   </div>
                   {mapUrl && (
                     <a href={mapUrl} target="_blank" rel="noopener noreferrer"
-                      className="btn-ghost btn-sm shrink-0 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                      className="btn-ghost btn-sm shrink-0 opacity-100 sm:opacity-80 sm:hover:opacity-100 transition-opacity whitespace-nowrap bg-primary/10 hover:bg-primary/20 text-primary font-medium">
                       <Navigation className="w-4 h-4" /> Directions
                     </a>
                   )}

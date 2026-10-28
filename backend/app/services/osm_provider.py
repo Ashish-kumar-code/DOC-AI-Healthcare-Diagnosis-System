@@ -1,170 +1,146 @@
+import math
+import logging
 import requests
 from .location_provider import LocationProvider
 
+logger = logging.getLogger(__name__)
+
+
+def haversine(lat1, lon1, lat2, lon2):
+    """Calculate distance in meters between two coordinates."""
+    r = 6371000  # Earth radius in meters
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlam = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
+    return r * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
 
 class OSMProvider(LocationProvider):
-    OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+    NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
+    HEADERS = {
+        "User-Agent": "DOC-AI-Healthcare-Platform/2.0 (healthcare-assistant@docai.local)",
+        "Accept": "application/json",
+    }
+
+    TYPE_KEYWORDS = {
+        "hospital": ["hospital", "super speciality hospital"],
+        "doctor": ["doctor", "clinic", "dispensary"],
+        "pharmacy": ["pharmacy", "chemist", "medical store"],
+    }
 
     def nearby_search(self, latitude, longitude, place_type="hospital", radius=5000):
-        import math
+        lat = float(latitude)
+        lon = float(longitude)
+        keywords = self.TYPE_KEYWORDS.get(place_type, [place_type])
 
-        # Map each type to multiple OSM tags for comprehensive results
-        type_to_tags = {
-            "hospital": [
-                'amenity=hospital',
-            ],
-            "doctor": [
-                'amenity=doctors',
-                'amenity=clinic',
-                'healthcare=doctor',
-                'healthcare=centre',
-            ],
-            "pharmacy": [
-                'amenity=pharmacy',
-                'shop=chemist',
-                'healthcare=pharmacy',
-            ],
-        }
+        results = []
+        seen_names = set()
 
-        tags = type_to_tags.get(place_type, ['amenity=hospital'])
+        # Query Nominatim for each relevant keyword to maximize coverage
+        for kw in keywords:
+            try:
+                params = {
+                    "q": f"{kw} near {lat},{lon}",
+                    "format": "json",
+                    "addressdetails": 1,
+                    "limit": 15,
+                }
+                resp = requests.get(self.NOMINATIM_URL, params=params, headers=self.HEADERS, timeout=8)
+                if resp.status_code != 200:
+                    continue
 
-        # Build Overpass query with multiple tags (union)
-        queries = []
-        for tag in tags:
-            queries.append(f'node[{tag}](around:{radius},{latitude},{longitude});')
-            queries.append(f'way[{tag}](around:{radius},{latitude},{longitude});')
-            queries.append(f'relation[{tag}](around:{radius},{latitude},{longitude});')
+                items = resp.json()
+                for item in items:
+                    item_lat = item.get("lat")
+                    item_lon = item.get("lon")
+                    if not item_lat or not item_lon:
+                        continue
 
-        overpass_query = f'[out:json][timeout:15];({" ".join(queries)});out center;'
+                    item_lat = float(item_lat)
+                    item_lon = float(item_lon)
 
-        headers = {
-            "User-Agent": "doc-ai-app/2.0",
-            "Accept": "application/json"
-        }
+                    # Compute distance
+                    dist_m = haversine(lat, lon, item_lat, item_lon)
 
-        def _haversine(lat1, lon1, lat2, lon2):
-            """Calculate distance in meters between two coordinates."""
-            R = 6371000  # Earth radius in meters
-            phi1, phi2 = math.radians(lat1), math.radians(lat2)
-            dphi = math.radians(lat2 - lat1)
-            dlam = math.radians(lon2 - lon1)
-            a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlam / 2) ** 2
-            return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+                    # Filter within reasonable radius (default 10km if radius not strict)
+                    max_allowed_radius = max(radius, 10000)
+                    if dist_m > max_allowed_radius:
+                        continue
 
+                    raw_display = item.get("display_name", "")
+                    name = raw_display.split(",")[0].strip() if raw_display else "Unknown Facility"
+
+                    # Deduplicate by normalized name
+                    norm_name = "".join(ch for ch in name.lower() if ch.isalnum())
+                    if not norm_name or norm_name in seen_names:
+                        continue
+                    seen_names.add(norm_name)
+
+                    # Address
+                    addr = raw_display
+
+                    # Google Maps navigation link
+                    map_url = f"https://www.google.com/maps/dir/?api=1&destination={item_lat},{item_lon}"
+
+                    results.append({
+                        "name": name,
+                        "category": place_type,
+                        "address": addr,
+                        "rating": None,
+                        "location": {"lat": item_lat, "lng": item_lon},
+                        "open_now": None,
+                        "opening_hours": None,
+                        "map_url": map_url,
+                        "phone": None,
+                        "distance_meters": round(dist_m),
+                    })
+            except Exception as e:
+                logger.warning(f"Error querying Nominatim for keyword '{kw}': {e}")
+                continue
+
+        # Sort nearest first
+        results.sort(key=lambda x: x.get("distance_meters", float("inf")))
+        return results[:25]
+
+    def text_search(self, query):
         try:
-            response = requests.get(self.OVERPASS_URL, params={"data": overpass_query}, timeout=15, headers=headers)
-            response.raise_for_status()
-            data = response.json()
+            params = {
+                "q": query,
+                "format": "json",
+                "limit": 20,
+                "addressdetails": 1,
+            }
+            resp = requests.get(self.NOMINATIM_URL, params=params, headers=self.HEADERS, timeout=10)
+            resp.raise_for_status()
+            data = resp.json()
 
             results = []
-            seen_names = set()  # Deduplicate by name
-
-            for el in data.get("elements", []):
-                tags_data = el.get("tags", {})
-                name = tags_data.get("name")
-
-                # Skip unnamed places
-                if not name or name == "Unknown":
+            seen = set()
+            for item in data:
+                raw_display = item.get("display_name", "")
+                name = raw_display.split(",")[0].strip() if raw_display else query
+                norm = name.lower()
+                if norm in seen:
                     continue
+                seen.add(norm)
 
-                # Deduplicate
-                name_lower = name.lower().strip()
-                if name_lower in seen_names:
-                    continue
-                seen_names.add(name_lower)
-
-                lat = el.get("lat") or el.get("center", {}).get("lat")
-                lon = el.get("lon") or el.get("center", {}).get("lon")
-
-                if not lat or not lon:
-                    continue
-
-                # Calculate distance
-                dist_m = _haversine(float(latitude), float(longitude), float(lat), float(lon))
-
-                # Build address from addr: tags
-                addr_parts = []
-                for key in ('addr:housenumber', 'addr:street', 'addr:suburb', 'addr:city', 'addr:postcode'):
-                    if key in tags_data:
-                        addr_parts.append(tags_data[key])
-                address = ", ".join(addr_parts) if addr_parts else tags_data.get('address', None)
-
-                # Opening hours
-                opening_hours = tags_data.get('opening_hours')
+                lat = float(item.get("lat", 0))
+                lon = float(item.get("lon", 0))
+                map_url = f"https://www.google.com/maps/dir/?api=1&destination={lat},{lon}"
 
                 results.append({
                     "name": name,
-                    "category": place_type,
-                    "address": address,
+                    "category": "manual",
+                    "address": raw_display,
+                    "location": {"lat": lat, "lng": lon},
+                    "map_url": map_url,
                     "rating": None,
-                    "location": {"lat": float(lat), "lng": float(lon)},
-                    "open_now": None,
-                    "opening_hours": opening_hours,
-                    "map_url": f"https://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=18/{lat}/{lon}",
-                    "phone": tags_data.get("phone") or tags_data.get("contact:phone"),
-                    "website": tags_data.get("website") or tags_data.get("contact:website"),
-                    "distance_meters": round(dist_m),
-                })
-
-            # Sort by distance and limit to 20
-            results.sort(key=lambda x: x.get("distance_meters", float('inf')))
-            return results[:20]
-
-        except Exception:
-            # Fallback to Nominatim
-            fallback_url = "https://nominatim.openstreetmap.org/search"
-            type_query_map = {
-                "hospital": "hospital",
-                "doctor": "clinic doctor",
-                "pharmacy": "pharmacy chemist",
-            }
-            fallback_params = {
-                "q": f"{type_query_map.get(place_type, place_type)} near {latitude},{longitude}",
-                "format": "json",
-                "limit": 20,
-                "addressdetails": 1
-            }
-            response = requests.get(fallback_url, params=fallback_params, timeout=15, headers=headers)
-            response.raise_for_status()
-            data = response.json()
-
-            results = []
-            for item in data:
-                if not item.get("lat") or not item.get("lon"):
-                    continue
-                dist_m = _haversine(float(latitude), float(longitude), float(item["lat"]), float(item["lon"]))
-                results.append({
-                    "name": item.get("display_name", "").split(",")[0],
-                    "category": place_type,
-                    "address": item.get("display_name"),
-                    "rating": None,
-                    "location": {"lat": float(item["lat"]), "lng": float(item["lon"])},
-                    "open_now": None,
-                    "map_url": f"https://www.openstreetmap.org/?mlat={item['lat']}&mlon={item['lon']}#map=18/{item['lat']}/{item['lon']}",
                     "phone": None,
-                    "distance_meters": round(dist_m),
+                    "open_now": None,
+                    "distance_meters": None,
                 })
-
-            results.sort(key=lambda x: x.get("distance_meters", float('inf')))
-            return results[:20]
-
-    def text_search(self, query):
-        url = "https://nominatim.openstreetmap.org/search"
-        response = requests.get(url, params={"q": query, "format": "json", "limit": 20}, timeout=15, headers={"User-Agent": "doc-ai-app/1.0"})
-        response.raise_for_status()
-        data = response.json()
-
-        results = []
-        for item in data:
-            results.append({
-                "name": item.get("display_name"),
-                "category": "manual",
-                "address": item.get("display_name"),
-                "location": {"lat": float(item.get("lat")), "lng": float(item.get("lon"))},
-                "map_url": f"https://www.openstreetmap.org/?mlat={item.get('lat')}&mlon={item.get('lon')}#map=18/{item.get('lat')}/{item.get('lon')}",
-                "rating": None,
-                "phone": None,
-                "open_now": None,
-                "distance_meters": None,
-            })
-        return results
+            return results
+        except Exception as e:
+            logger.error(f"Text search error: {e}")
+            return []

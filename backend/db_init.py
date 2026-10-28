@@ -15,6 +15,7 @@ load_dotenv()
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 from app import create_app, db
+from app.models import User, DiagnosisHistory, UploadedImage, ChatSession, NearbySearchCache
 from flask_migrate import Migrate
 
 app = create_app()

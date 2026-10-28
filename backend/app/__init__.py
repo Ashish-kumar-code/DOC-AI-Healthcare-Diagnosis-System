@@ -78,6 +78,11 @@ def create_app(config_class=Config):
     app.register_blueprint(report_bp, url_prefix="/api/report")
     app.register_blueprint(admin_bp)
 
+    # Ensure database tables exist (safe: executes CREATE TABLE IF NOT EXISTS)
+    with app.app_context():
+        from . import models  # noqa: F401
+        db.create_all()
+
     # ---- Health & Readiness Probes ----
 
     @app.route("/api/health")
