@@ -29,7 +29,6 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 
 import DashboardLayout from '../components/layouts/DashboardLayout';
 import PageTransition from '../components/layouts/PageTransition';
-import AnimatedLungs from '../components/medical/AnimatedLungs';
 import RespiratorySystem3D from '../components/medical/RespiratorySystem3D';
 import XRayScanPanel from '../components/medical/XRayScanPanel';
 import { Badge } from '../components/data/Badge';
@@ -79,7 +78,6 @@ export default function DashboardPage() {
   const [diagnoses, setDiagnoses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [modelStatus, setModelStatus] = useState(null);
-  const [selectedLungZone, setSelectedLungZone] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -195,32 +193,18 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            {/* ============================================================
-                IMMERSIVE 3D RESPIRATORY SYSTEM VIEWER
-               ============================================================ */}
-            <div className="mb-6">
-              <RespiratorySystem3D
-                status={latest?.final_prediction || 'Normal'}
-                confidence={latest?.confidence_score || 96.4}
-              />
-            </div>
-
             {/* Main Stage Arena: 12-Column Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-              {/* Left & Center: Floating Metric Cards + Breathing Lungs */}
-              <div className="lg:col-span-8 relative flex flex-col justify-between min-h-[460px]">
-                {/* Organ Center with Glowing Radial Aura */}
-                <div className="relative py-4 flex items-center justify-center">
-                  <AnimatedLungs
-                    status={latest?.final_prediction || 'Normal'}
-                    confidence={latest?.confidence_score || 96.4}
-                    breathingRate={16}
-                    onZoneSelect={(zone) => setSelectedLungZone(zone)}
-                  />
-                </div>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+              {/* Left & Center: 3D Respiratory System Viewer + Floating Metric Cards */}
+              <div className="lg:col-span-8 flex flex-col gap-5">
+                {/* 3D Respiratory System Viewer */}
+                <RespiratorySystem3D
+                  status={latest?.final_prediction || 'Normal'}
+                  confidence={latest?.confidence_score || 96.4}
+                />
 
                 {/* 6 Floating / Surrounding Glass Metric Cards (Mediva Architecture) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5 mt-4 z-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5 z-20">
                   {/* Card 1: Predicted Condition */}
                   <motion.div
                     variants={fadeInUp}
