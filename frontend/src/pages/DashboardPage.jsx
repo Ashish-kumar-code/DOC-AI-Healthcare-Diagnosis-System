@@ -30,6 +30,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 import DashboardLayout from '../components/layouts/DashboardLayout';
 import PageTransition from '../components/layouts/PageTransition';
 import AnimatedLungs from '../components/medical/AnimatedLungs';
+import RespiratorySystem3D from '../components/medical/RespiratorySystem3D';
 import XRayScanPanel from '../components/medical/XRayScanPanel';
 import { Badge } from '../components/data/Badge';
 import { SkeletonStats } from '../components/data/SkeletonLoader';
@@ -192,6 +193,16 @@ export default function DashboardPage() {
                   <span>Ensemble AI Active</span>
                 </div>
               </div>
+            </div>
+
+            {/* ============================================================
+                IMMERSIVE 3D RESPIRATORY SYSTEM VIEWER
+               ============================================================ */}
+            <div className="mb-6">
+              <RespiratorySystem3D
+                status={latest?.final_prediction || 'Normal'}
+                confidence={latest?.confidence_score || 96.4}
+              />
             </div>
 
             {/* Main Stage Arena: 12-Column Grid */}
