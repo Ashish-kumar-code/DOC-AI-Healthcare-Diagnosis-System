@@ -22,8 +22,12 @@ def create_app(config_class=Config):
     )
     logger.info(f"DOC AI starting in {app.config.get('ENV', 'development')} mode")
 
-    allowed_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",")
-    CORS(app, resources={"/api/*": {"origins": allowed_origins}}, supports_credentials=True)
+    raw_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173")
+    if raw_origins.strip() == "*":
+        allowed_origins = "*"
+    else:
+        allowed_origins = [o.strip() for o in raw_origins.split(",") if o.strip()]
+    CORS(app, resources={r"/*": {"origins": allowed_origins}}, supports_credentials=True)
 
     # Initialize extensions
     db.init_app(app)
@@ -77,6 +81,13 @@ def create_app(config_class=Config):
     app.register_blueprint(location_bp, url_prefix="/api/location")
     app.register_blueprint(report_bp, url_prefix="/api/report")
     app.register_blueprint(admin_bp)
+
+    # Route aliases without '/api' prefix to handle any clients missing the prefix
+    app.register_blueprint(auth_bp, name="auth_direct", url_prefix="/auth")
+    app.register_blueprint(diagnosis_bp, name="diagnosis_direct", url_prefix="/diagnosis")
+    app.register_blueprint(chat_bp, name="chat_direct", url_prefix="/chat")
+    app.register_blueprint(location_bp, name="location_direct", url_prefix="/location")
+    app.register_blueprint(report_bp, name="report_direct", url_prefix="/report")
 
     # Ensure database tables exist (safe: executes CREATE TABLE IF NOT EXISTS)
     with app.app_context():

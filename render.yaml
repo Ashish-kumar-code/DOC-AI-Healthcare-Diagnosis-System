@@ -30,7 +30,7 @@ services:
       - key: TEXT_MODEL_PATH
         value: app/ml/text_model.joblib
       - key: GUNICORN_WORKERS
-        value: "4"
+        value: "1"
       - key: GUNICORN_TIMEOUT
         value: "120"
       - key: LOG_LEVEL
@@ -71,3 +71,6 @@ databases:
     plan: free
     databaseName: doc_ai
     user: doc_ai_user
+
+
+

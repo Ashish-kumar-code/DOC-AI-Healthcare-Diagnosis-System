@@ -8,8 +8,13 @@ bind = f"0.0.0.0:{os.getenv('PORT', '5000')}"
 backlog = 2048
 
 # Worker processes
-# Recommended: 2-4 x $(NUM_CORES)
-workers = int(os.getenv('GUNICORN_WORKERS', multiprocessing.cpu_count() * 2 + 1))
+# On memory-constrained environments (e.g. Render 512MB free tier),
+# 1 worker with multiple threads handles concurrent requests while keeping
+# TensorFlow memory footprint under 200MB.
+default_workers = os.getenv('WEB_CONCURRENCY', '1')
+workers = int(os.getenv('GUNICORN_WORKERS', default_workers))
+if 'GUNICORN_WORKERS' not in os.environ and workers > 1:
+    workers = 1
 worker_class = 'gthread'  # Thread-based workers for I/O bound Flask apps
 threads = int(os.getenv('GUNICORN_THREADS', 4))
 worker_connections = 1000
