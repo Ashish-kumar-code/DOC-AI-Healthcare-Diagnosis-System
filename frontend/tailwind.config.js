@@ -8,138 +8,123 @@ export default {
     extend: {
       colors: {
         /* ============================================================
-           🎨 Color Palette: ColorHunt — Earthy Sage & Cream
-           #F8EDE3 · #BDD2B6 · #A2B29F · #798777
+           🩺 Mediva Medical Palette: Clinical Teal · Sky Blue · Crisp White
            ============================================================ */
 
         background: {
-          DEFAULT: '#FBF5EF',   // warm cream (tinted from #F8EDE3)
+          DEFAULT: '#F8FAFC',   // slate-50 (clean clinical background)
           50: '#FFFFFF',
-          100: '#FBF5EF',
-          200: '#F8EDE3',       // palette color 1
-          300: '#EFE0D1',
-          400: '#E4D0BC',
+          100: '#F8FAFC',
+          200: '#F1F5F9',
+          300: '#E2E8F0',
+          400: '#CBD5E1',
         },
         card: {
           DEFAULT: '#FFFFFF',
-          hover: '#FBF5EF',
-          active: '#F8EDE3',
+          hover: '#F8FAFC',
+          active: '#F1F5F9',
         },
         surface: {
-          DEFAULT: '#F8EDE3',
-          light: '#FEFAF6',
+          DEFAULT: '#F8FAFC',
+          light: '#FFFFFF',
+          teal: '#F0FDFA',
         },
 
-        // Primary — Built from #798777 (Dark Sage)
+        // Primary — Medical Clinical Teal (#0D9488)
         primary: {
-          DEFAULT: '#798777',
-          50:  '#F2F4F1',
-          100: '#E4E8E2',
-          200: '#C9D1C6',
-          300: '#ADBAA9',
-          400: '#92A38D',
-          500: '#798777',       // palette color 4
-          600: '#6B7969',
-          700: '#5C695B',
-          800: '#4D584D',
-          900: '#3E473E',
+          DEFAULT: '#0D9488',
+          50:  '#F0FDFA',
+          100: '#CCFBF1',
+          200: '#99F6E4',
+          300: '#5EEAD4',
+          400: '#2DD4BF',
+          500: '#14B8A6',
+          600: '#0D9488',
+          700: '#0F766E',
+          800: '#115E59',
+          900: '#134E4A',
         },
 
-        // Secondary — Built from #BDD2B6 (Soft Sage Green)
+        // Secondary — Precision Sky Blue (#0284C7)
         secondary: {
-          DEFAULT: '#BDD2B6',
-          50:  '#F4F8F3',
-          100: '#E8F1E6',
-          200: '#D2E3CE',
-          300: '#BDD2B6',       // palette color 2
-          400: '#A5C29D',
-          500: '#8DB284',
-          600: '#79A06F',
-          700: '#658A5C',
-          800: '#53724C',
-          900: '#425B3D',
+          DEFAULT: '#0284C7',
+          50:  '#F0F9FF',
+          100: '#E0F2FE',
+          200: '#BAE6FD',
+          300: '#7DD3FC',
+          400: '#38BDF8',
+          500: '#0EA5E9',
+          600: '#0284C7',
+          700: '#0369A1',
+          800: '#075985',
+          900: '#0C4A6E',
         },
 
-        // Accent — Built from #A2B29F (Olive Sage)
+        // Accent — Bright Medical Cyan (#06B6D4)
         accent: {
-          DEFAULT: '#A2B29F',
-          50:  '#F2F5F1',
-          100: '#E5EAE3',
-          200: '#CCD5C9',
-          300: '#B3C0AF',
-          400: '#A2B29F',       // palette color 3
-          500: '#8D9E89',
-          600: '#7A8B76',
-          700: '#677764',
-          800: '#556353',
-          900: '#445043',
+          DEFAULT: '#06B6D4',
+          50:  '#ECFEFF',
+          100: '#CFFAFE',
+          200: '#A5F3FC',
+          300: '#67E8F9',
+          400: '#22D3EE',
+          500: '#06B6D4',
+          600: '#0891B2',
+          700: '#0E7490',
+          800: '#155E75',
+          900: '#164E63',
         },
 
-        // Warm Cream — Built from #F8EDE3 (Lightest palette color)
-        cream: {
-          DEFAULT: '#F8EDE3',
-          50:  '#FEFBF8',
-          100: '#FDF7F1',
-          200: '#F8EDE3',       // palette color 1
-          300: '#F0DCC8',
-          400: '#E6C9AB',
-          500: '#DBBA96',
-          600: '#C9A47A',
-          700: '#B08C61',
-          800: '#8F7250',
-          900: '#6E5940',
-        },
-
-        // Status colors — harmonised with sage palette
+        // Status Colors
         success: {
-          DEFAULT: '#6B9E5E',
-          50:  '#F0F7EE',
-          100: '#DDEFD8',
-          200: '#BBDFB2',
-          300: '#99CF8B',
-          400: '#82BF72',
-          500: '#6B9E5E',
-          600: '#578A4B',
-          700: '#477640',
-          800: '#3A6135',
-          900: '#2E4E2B',
+          DEFAULT: '#10B981',
+          50:  '#ECFDF5',
+          100: '#D1FAE5',
+          200: '#A7F3D0',
+          300: '#6EE7B7',
+          400: '#34D399',
+          500: '#10B981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065F46',
+          900: '#064E3B',
         },
         warning: {
-          DEFAULT: '#D4A843',
-          50:  '#FDF8EC',
-          100: '#FAF0D3',
-          200: '#F5E0A8',
-          300: '#EFCF7D',
-          400: '#E4BC5D',
-          500: '#D4A843',
-          600: '#B58C32',
-          700: '#96742A',
-          800: '#785D23',
-          900: '#5F4A1D',
+          DEFAULT: '#F59E0B',
+          50:  '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
         },
         danger: {
-          DEFAULT: '#C26050',
-          50:  '#FDF2F0',
-          100: '#F9E0DB',
-          200: '#F2C0B7',
-          300: '#E99D90',
-          400: '#D67E6E',
-          500: '#C26050',
-          600: '#A84D3F',
-          700: '#8E4035',
-          800: '#74342C',
-          900: '#5B2923',
+          DEFAULT: '#EF4444',
+          50:  '#FEF2F2',
+          100: '#FEE2E2',
+          200: '#FECACA',
+          300: '#FCA5A5',
+          400: '#F87171',
+          500: '#EF4444',
+          600: '#DC2626',
+          700: '#B91C1C',
+          800: '#991B1B',
+          900: '#7F1D1D',
         },
 
-        'text-primary':   '#3E3E3B',   // warm near-black
-        'text-secondary': '#6B6B66',   // warm grey
-        'text-tertiary':  '#A2A29A',   // muted warm grey
-        'text-muted':     '#C9C5BD',   // light warm grey
+        'text-primary':   '#0F172A',   // slate-900
+        'text-secondary': '#475569',   // slate-600
+        'text-tertiary':  '#94A3B8',   // slate-400
+        'text-muted':     '#CBD5E1',   // slate-300
 
         border: {
-          DEFAULT: '#E4DDD4',         // warm border
-          hover:   '#CEC5B8',
-          active:  '#A2B29F',         // palette olive
+          DEFAULT: '#E2E8F0',         // slate-200
+          hover:   '#CBD5E1',
+          active:  '#0D9488',
         },
       },
       fontFamily: {
@@ -159,22 +144,23 @@ export default {
         '4xl': '32px',
       },
       boxShadow: {
-        'glow-sm': '0 0 10px rgba(121, 135, 119, 0.1)',
-        'glow': '0 0 20px rgba(121, 135, 119, 0.15)',
-        'glow-lg': '0 0 40px rgba(121, 135, 119, 0.2)',
-        'glow-xl': '0 0 60px rgba(121, 135, 119, 0.15)',
-        'glow-primary': '0 0 20px rgba(121, 135, 119, 0.25)',
-        'glow-secondary': '0 0 20px rgba(189, 210, 182, 0.3)',
-        'glow-success': '0 0 20px rgba(107, 158, 94, 0.25)',
-        'glow-danger': '0 0 20px rgba(194, 96, 80, 0.25)',
-        'soft': '0 4px 6px -1px rgba(62, 62, 59, 0.04), 0 2px 4px -2px rgba(62, 62, 59, 0.04)',
-        'soft-lg': '0 10px 15px -3px rgba(62, 62, 59, 0.05), 0 4px 6px -4px rgba(62, 62, 59, 0.04)',
-        'soft-xl': '0 20px 25px -5px rgba(62, 62, 59, 0.06), 0 8px 10px -6px rgba(62, 62, 59, 0.04)',
-        'inner-glow': 'inset 0 1px 0 rgba(255, 255, 255, 0.5)',
-        'card': '0 1px 3px 0 rgba(62, 62, 59, 0.06), 0 1px 2px -1px rgba(62, 62, 59, 0.06)',
-        'card-hover': '0 10px 15px -3px rgba(62, 62, 59, 0.08), 0 4px 6px -4px rgba(62, 62, 59, 0.04)',
-        'button': '0 1px 2px 0 rgba(62, 62, 59, 0.05)',
-        'button-hover': '0 4px 6px -1px rgba(62, 62, 59, 0.08), 0 2px 4px -2px rgba(62, 62, 59, 0.06)',
+        'glow-sm': '0 0 10px rgba(13, 148, 136, 0.1)',
+        'glow': '0 0 20px rgba(13, 148, 136, 0.15)',
+        'glow-lg': '0 0 40px rgba(13, 148, 136, 0.2)',
+        'glow-xl': '0 0 60px rgba(13, 148, 136, 0.15)',
+        'glow-primary': '0 0 20px rgba(13, 148, 136, 0.25)',
+        'glow-secondary': '0 0 20px rgba(2, 132, 199, 0.25)',
+        'glow-cyan': '0 0 25px rgba(6, 182, 212, 0.35)',
+        'glow-success': '0 0 20px rgba(16, 185, 129, 0.25)',
+        'glow-danger': '0 0 20px rgba(239, 68, 68, 0.25)',
+        'soft': '0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.03)',
+        'soft-lg': '0 10px 15px -3px rgba(15, 23, 42, 0.04), 0 4px 6px -4px rgba(15, 23, 42, 0.03)',
+        'soft-xl': '0 20px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03)',
+        'inner-glow': 'inset 0 1px 0 rgba(255, 255, 255, 0.8)',
+        'card': '0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03)',
+        'card-hover': '0 12px 24px -4px rgba(13, 148, 136, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.03)',
+        'button': '0 1px 2px 0 rgba(13, 148, 136, 0.05)',
+        'button-hover': '0 4px 12px -2px rgba(13, 148, 136, 0.2)',
       },
       backdropBlur: {
         'xs': '2px',
@@ -194,12 +180,15 @@ export default {
         'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
         'float': 'float 6s ease-in-out infinite',
         'float-delayed': 'float 6s ease-in-out 2s infinite',
-        'spin-slow': 'spin 3s linear infinite',
+        'spin-slow': 'spin 8s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'shimmer': 'shimmer 2s linear infinite',
         'bounce-soft': 'bounceSoft 2s ease-in-out infinite',
         'progress': 'progress 1.5s ease-in-out infinite',
         'ripple': 'ripple 1s ease-out',
+        'breathe': 'breathe 4s ease-in-out infinite',
+        'breathe-slow': 'breathe 5.5s ease-in-out infinite',
+        'scan': 'scan 2.8s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -235,8 +224,8 @@ export default {
           '100%': { opacity: '1', transform: 'scale(1)' },
         },
         pulseGlow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(121, 135, 119, 0.15)' },
-          '50%': { boxShadow: '0 0 40px rgba(121, 135, 119, 0.3)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(13, 148, 136, 0.2)' },
+          '50%': { boxShadow: '0 0 40px rgba(13, 148, 136, 0.4)' },
         },
         pulseSoft: {
           '0%, 100%': { opacity: '1' },
@@ -244,7 +233,7 @@ export default {
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '50%': { transform: 'translateY(-12px)' },
         },
         gradient: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
@@ -256,7 +245,7 @@ export default {
         },
         bounceSoft: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-8px)' },
+          '50%': { transform: 'translateY(-6px)' },
         },
         progress: {
           '0%': { width: '0%' },
@@ -266,6 +255,15 @@ export default {
         ripple: {
           '0%': { transform: 'scale(0)', opacity: '0.5' },
           '100%': { transform: 'scale(4)', opacity: '0' },
+        },
+        breathe: {
+          '0%, 100%': { transform: 'scale(0.96)', opacity: '0.88' },
+          '50%': { transform: 'scale(1.04)', opacity: '1' },
+        },
+        scan: {
+          '0%': { top: '0%', opacity: '0.8' },
+          '50%': { top: '95%', opacity: '1' },
+          '100%': { top: '0%', opacity: '0.8' },
         },
       },
       backgroundSize: {
